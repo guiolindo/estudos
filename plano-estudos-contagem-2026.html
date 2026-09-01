@@ -1742,7 +1742,17 @@ function getDisciplinasDoCargo(code){
   const cargo = EDITAL_DATA.cargos[nivel][code];
   const arr = [];
   for(const nome of Object.keys(comuns)) arr.push({ nome, topicos: comuns[nome], especifica:false });
-  arr.push({ nome:"Conhecimentos Específicos", topicos: cargo.topicos, especifica:true });
+
+  // Para Conhecimentos Específicos: se há aulas integradas para este cargo,
+  // usa os TÍTULOS das aulas como lista de tópicos (garantindo que toda entrada
+  // tenha conteúdo). Se não houver, cai no roteiro do edital.
+  const aulasIntegr = (typeof CONTEUDO_INTEGRADO !== "undefined" ? CONTEUDO_INTEGRADO.aulas : []) || [];
+  const espAulas = aulasIntegr.filter(a =>
+    normStr(a.disciplina||"") === normStr("Conhecimentos Específicos") &&
+    (!a._cargo || a._cargo === code)
+  );
+  const especTopicos = espAulas.length ? espAulas.map(a => a.topico) : cargo.topicos;
+  arr.push({ nome:"Conhecimentos Específicos", topicos: especTopicos, especifica:true });
   return arr;
 }
 function getTopicoStatus(cargo, disc, idx){
