@@ -138,7 +138,51 @@ th{color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:
 .aula-body em{color:var(--brand);font-style:italic;}
 .aula-body table{margin:10px 0;font-size:12.5px;}
 .aula-body table td,.aula-body table th{padding:5px 10px;border:1px solid var(--border);text-align:center;}
-.aula-navbar{margin-top:22px;display:flex;gap:10px;padding-top:16px;border-top:1px solid var(--border);}
+.aula-navbar{margin-top:22px;display:flex;gap:10px;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;}
+/* Layout de leitura para aulas — tipografia rica */
+.reader{max-width:760px;margin:0 auto;padding:8px 4px;}
+.reader h1{font-size:26px;line-height:1.25;margin-bottom:6px;}
+.reader .meta-aula{color:var(--text-dim);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.reader .meta-aula .pill{padding:3px 10px;border-radius:20px;background:var(--brand-dim);color:var(--brand);letter-spacing:.02em;text-transform:none;font-size:11px;}
+.reader h2{font-size:20px;line-height:1.3;margin:36px 0 12px;color:var(--text);border-bottom:2px solid var(--brand);padding-bottom:8px;display:inline-block;}
+.reader h3{font-size:16px;line-height:1.35;margin:24px 0 10px;color:var(--brand);text-transform:none;letter-spacing:0;}
+.reader p, .reader li{font-size:15px;line-height:1.75;color:var(--text);}
+.reader ul, .reader ol{padding-left:24px;margin:12px 0 18px;}
+.reader li{margin-bottom:8px;}
+.reader strong{color:var(--text);font-weight:700;}
+.reader em{color:var(--brand);font-style:italic;}
+.reader code{background:var(--bg-soft);padding:2px 7px;border-radius:5px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace;}
+.reader blockquote{border-left:4px solid var(--brand);margin:16px 0;padding:6px 16px;background:var(--brand-dim);border-radius:8px;color:var(--text);font-size:14.5px;}
+.reader table{margin:16px 0;font-size:13.5px;border-collapse:collapse;width:auto;}
+.reader table th, .reader table td{padding:8px 14px;border:1px solid var(--border);}
+.reader table th{background:var(--bg-soft);font-weight:700;color:var(--text);}
+.reader .callout{border-radius:12px;padding:16px 20px;margin:20px 0;border:1px solid var(--border);}
+.reader .callout.exemplo{background:linear-gradient(135deg,rgba(0,184,148,.08),rgba(0,184,148,.02));border-color:rgba(0,184,148,.35);}
+.reader .callout.dica{background:linear-gradient(135deg,rgba(243,156,18,.08),rgba(243,156,18,.02));border-color:rgba(243,156,18,.35);}
+.reader .callout.resumo{background:linear-gradient(135deg,rgba(61,90,241,.08),rgba(61,90,241,.02));border-color:rgba(61,90,241,.35);}
+.reader .callout .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.reader .callout.exemplo .callout-title{color:var(--accent);}
+.reader .callout.dica .callout-title{color:var(--warn);}
+.reader .callout.resumo .callout-title{color:var(--brand);}
+.reader .callout p:last-child{margin-bottom:0;}
+.reader .kw-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 24px;}
+.reader .kw-chip{background:var(--bg-soft);color:var(--text-dim);font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;border:1px solid var(--border);}
+/* Sidebar de aulas — visual mais rico */
+.aula-side{background:var(--bg-elev);border:1px solid var(--border);border-radius:var(--radius);padding:14px;max-height:calc(100vh - 130px);overflow-y:auto;position:sticky;top:80px;box-shadow:var(--shadow);}
+.aula-side .disc-select-wrap{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.aula-side .disc-progress{font-size:11px;color:var(--text-dim);margin-top:6px;display:flex;justify-content:space-between;font-weight:700;}
+.aula-topic-item{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:12.8px;margin-bottom:2px;transition:.12s;line-height:1.35;}
+.aula-topic-item:hover{background:var(--bg-soft);}
+.aula-topic-item.active{background:var(--brand-dim);color:var(--brand);font-weight:700;}
+.aula-topic-item span:first-child{font-size:12px;flex:0 0 auto;}
+/* Prompt para copiar */
+.prompt-box{background:#0d1120;color:#c9d1e8;padding:18px 20px;border-radius:12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.65;max-height:520px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;border:1px solid #23283d;}
+:root[data-theme="light"] .prompt-box{background:#0f1424;color:#dbe2f5;}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:var(--brand-ink);font-weight:800;font-size:13px;margin-right:10px;flex:0 0 auto;}
+.step-row{display:flex;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);}
+.step-row:last-child{border-bottom:none;}
+.step-row .step-body{flex:1;font-size:13.5px;line-height:1.6;}
+.step-row .step-body strong{color:var(--text);}
 @media(max-width:860px){.sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);box-shadow:var(--shadow);}.sidebar.open{transform:translateX(0);}.menu-toggle{display:flex;}.pomo-widget .time{min-width:40px;font-size:12px;}.topbar h2{font-size:15px;}}
 </style>
 </head>
@@ -160,6 +204,7 @@ th{color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:
       <button class="navbtn" data-view="resumao"><span class="ic">📌</span> Resumão</button>
       <button class="navbtn" data-view="glossario"><span class="ic">📕</span> Glossário</button>
       <button class="navbtn" data-view="estatisticas"><span class="ic">📊</span> Estatísticas</button>
+      <button class="navbtn" data-view="importar"><span class="ic">📥</span> Importar conteúdo</button>
       <button class="navbtn" data-view="ajuda"><span class="ic">❓</span> Ajuda</button>
       <button class="navbtn" data-view="config"><span class="ic">⚙️</span> Config</button>
     </nav>
@@ -305,6 +350,7 @@ th{color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:
       <div class="card" style="margin-top:16px;"><h3>Últimas sessões de estudo</h3><div id="sessoesList"></div></div>
     </section>
 
+    <section class="view" id="view-importar"></section>
     <section class="view" id="view-ajuda"></section>
 
     <section class="view" id="view-config">
@@ -1509,10 +1555,59 @@ function defaultState(){
     historicoSimulados: [],
     flashcards: [],
     anotacoes: {},       // { cargo: { discNome: { topicoIdx: "texto" } } }
-    ultimaAula: null,    // { disc, topicoIdx }
+    ultimaAula: null,
+    conteudoImportado: { aulas: [], meta: null }, // { aulas: [ {disciplina, topico, ...} ], meta:{...} }
     config: { tema:"auto", pomodoroFoco:25, pomodoroPausa:5 },
     ultimaAtualizacao: null
   };
+}
+/* Normaliza uma string para comparação (remove acentos, minúscula, sem pontuação) */
+function normStr(s){
+  return (s||"").toString().toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g,"")
+    .replace(/[^a-z0-9\s]/g," ")
+    .replace(/\s+/g," ").trim();
+}
+/* Busca uma aula importada que case com o (disciplina, tópico do edital) */
+function getAulaImportada(discNome, topicoTexto){
+  const arr = STATE.conteudoImportado?.aulas || [];
+  if(!arr.length) return null;
+  const dn = normStr(discNome), tn = normStr(topicoTexto).slice(0,80);
+  // 1) match exato ou prefixo
+  for(const a of arr){
+    const ad = normStr(a.disciplina||"");
+    const at = normStr(a.topico||"");
+    if(ad === dn && (at === normStr(topicoTexto) || tn.startsWith(at.slice(0,40)) || at.startsWith(tn.slice(0,40)))) return a;
+  }
+  // 2) match por conjunto de palavras-chave iniciais
+  const tKeys = tn.split(" ").slice(0,5).filter(w=>w.length>3);
+  for(const a of arr){
+    const ad = normStr(a.disciplina||"");
+    if(ad !== dn) continue;
+    const at = normStr(a.topico||"");
+    const overlap = tKeys.filter(k=>at.includes(k)).length;
+    if(overlap >= 2) return a;
+  }
+  return null;
+}
+/* Retorna as questões importadas para (disciplina, tópico opcional) */
+function getQuestoesImportadas(discNome, topicoTexto=null){
+  const arr = STATE.conteudoImportado?.aulas || [];
+  if(!arr.length) return [];
+  const dn = normStr(discNome);
+  const out = [];
+  arr.forEach(a=>{
+    if(normStr(a.disciplina||"") !== dn) return;
+    if(topicoTexto){
+      const at = normStr(a.topico||""), tn = normStr(topicoTexto);
+      if(at !== tn && !tn.includes(at.slice(0,30)) && !at.includes(tn.slice(0,30))) return;
+    }
+    (a.questoes||[]).forEach(q=>{
+      out.push({ enunciado:q.enunciado, alternativas:q.alternativas, correta:q.correta,
+        dificuldade:q.dificuldade||"Média", explicacao:q.explicacao||"", disciplina:discNome, importada:true });
+    });
+  });
+  return out;
 }
 
 let STATE = loadState();
@@ -1659,10 +1754,12 @@ function gerarQuestoesAutomaticas(cargo, disciplina, qtd){
   return out;
 }
 function getQuestoesDisponiveis(cargo, disciplina){
+  const importadas = getQuestoesImportadas(disciplina);
   const manuais = QUESTION_BANK[disciplina] ? QUESTION_BANK[disciplina].map(q=>({...q, disciplina, gerada:false})) : [];
-  if(manuais.length >= 10 && disciplina !== "Conhecimentos Específicos") return manuais;
-  const geradas = gerarQuestoesAutomaticas(cargo, disciplina, Math.max(10 - manuais.length, 0) + 6);
-  return manuais.concat(geradas);
+  const base = importadas.concat(manuais);
+  if(base.length >= 10 && disciplina !== "Conhecimentos Específicos") return base;
+  const geradas = gerarQuestoesAutomaticas(cargo, disciplina, Math.max(10 - base.length, 0) + 6);
+  return base.concat(geradas);
 }
 
 /* ---------------------- 5. FLASHCARDS ---------------------- */
@@ -1744,6 +1841,7 @@ const VIEW_TITLES = {
   resumao:["Resumão","Mapas mentais e sínteses das disciplinas"],
   glossario:["Glossário","Termos-chave do edital"],
   estatisticas:["Estatísticas","Gráficos de desempenho e evolução"],
+  importar:["Importar conteúdo","Gere aulas ricas em outra IA e importe aqui"],
   ajuda:["Ajuda","Como usar e personalizar"],
   config:["Configurações","Aparência, metas, pomodoro e backup"]
 };
@@ -1857,31 +1955,25 @@ function logTopicoConcluidoHoje(cargo){
 let aulaAtual = null; // { disc, topicoIdx }
 function renderAulas(){
   const cargo = STATE.cargoSelecionado;
-  const nivel = getCargoLevel(cargo);
   const discs = getDisciplinasDoCargo(cargo);
   populateDisciplinaSelects();
 
-  // Selector de disciplina + lista de tópicos + área da aula
   document.getElementById("view-aulas").innerHTML = `
-    <div class="grid" style="grid-template-columns:280px 1fr;gap:16px;" id="aulasLayout">
-      <div class="card" style="max-height:calc(100vh - 140px);overflow-y:auto;">
-        <label>Disciplina</label>
-        <select id="aulaDiscSelect">${discs.map(d=>`<option value="${d.nome}">${d.nome}</option>`).join("")}</select>
-        <div id="aulaTopicList" style="margin-top:14px;"></div>
-      </div>
-      <div class="card" id="aulaContent" style="min-height:400px;">
-        <p class="empty">Escolha um tópico à esquerda para começar a estudar.</p>
-      </div>
-    </div>
-    <div class="card" style="margin-top:16px;">
-      <h3>Passo a passo do Modo Estudo</h3>
-      <ol style="margin:0 0 0 20px;line-height:1.7;font-size:13px;">
-        <li>Leia a aula com atenção. Sublinhe mentalmente o que é novidade.</li>
-        <li>Anote no campo abaixo da aula: o que você aprendeu, dúvidas, macetes.</li>
-        <li>Responda às questões vinculadas ao tópico — foque em entender o gabarito comentado, não só em acertar.</li>
-        <li>Marque o tópico como "concluído" e passe ao próximo.</li>
-        <li>No dia seguinte, revise via Flashcards.</li>
-      </ol>
+    <div class="grid" style="grid-template-columns:260px 1fr;gap:20px;" id="aulasLayout">
+      <aside class="aula-side">
+        <div class="disc-select-wrap">
+          <label>Disciplina</label>
+          <select id="aulaDiscSelect">${discs.map(d=>`<option value="${d.nome}">${d.nome}</option>`).join("")}</select>
+          <div class="disc-progress"><span id="aulaDiscProgLabel">—</span><span id="aulaDiscProgPct">0%</span></div>
+          <div class="progressbar sm" style="margin-top:4px;"><i id="aulaDiscProgBar" style="width:0%"></i></div>
+        </div>
+        <div id="aulaTopicList"></div>
+      </aside>
+      <main id="aulaContent">
+        <div class="reader">
+          <p class="empty">Escolha um tópico à esquerda para começar a estudar.</p>
+        </div>
+      </main>
     </div>
   `;
 
@@ -1901,22 +1993,30 @@ function renderAulas(){
   }
 }
 
-function renderListaTopicosParaAula(disc){
+function renderListaTopicosParaAula(disc, activeIdx=null){
   const cargo = STATE.cargoSelecionado;
   const topicos = getDisciplinasDoCargo(cargo).find(d=>d.nome===disc)?.topicos || [];
   const list = document.getElementById("aulaTopicList");
   list.innerHTML = topicos.map((t,i)=>{
     const st = getTopicoStatus(cargo, disc, i);
     const dot = st==="feito"?"🟢":st==="andamento"?"🟡":"⚪";
+    const importada = getAulaImportada(disc, t) ? " ✨":"";
     const short = t.split(":")[0].split(";")[0];
     const cap = short.length>60 ? short.slice(0,58)+"…" : short;
-    return `<div class="aula-topic-item" data-open-aula="${i}" data-disc="${disc.replace(/"/g,'&quot;')}">
-      <span>${dot}</span><span>${cap}</span>
+    const active = activeIdx===i ? " active":"";
+    return `<div class="aula-topic-item${active}" data-open-aula="${i}" data-disc="${disc.replace(/"/g,'&quot;')}" title="${t.replace(/"/g,'&quot;')}">
+      <span>${dot}</span><span>${cap}${importada}</span>
     </div>`;
   }).join("");
   list.querySelectorAll("[data-open-aula]").forEach(el=>{
     el.addEventListener("click", ()=> abrirAula(el.dataset.disc, parseInt(el.dataset.openAula)));
   });
+  // Progresso da disciplina
+  const pct = discProgressPct(cargo, disc);
+  const feitos = topicos.filter((_,i)=>getTopicoStatus(cargo,disc,i)==="feito").length;
+  document.getElementById("aulaDiscProgLabel").textContent = `${feitos}/${topicos.length} tópicos`;
+  document.getElementById("aulaDiscProgPct").textContent = `${pct}%`;
+  document.getElementById("aulaDiscProgBar").style.width = pct+"%";
 }
 
 function abrirAula(disc, topicoIdx){
@@ -1926,78 +2026,166 @@ function abrirAula(disc, topicoIdx){
   const discObj = disciplinas.find(d=>d.nome===disc);
   if(!discObj) return;
   const topico = discObj.topicos[topicoIdx];
-  const aula = getAulaParaTopico(disc, topicoIdx, nivel);
+  const aulaImp = getAulaImportada(disc, topico);
+  const aulaLocal = !aulaImp ? getAulaParaTopico(disc, topicoIdx, nivel) : null;
   const anot = getAnotacao(cargo, disc, topicoIdx);
   const st = getTopicoStatus(cargo, disc, topicoIdx);
   aulaAtual = { disc, topicoIdx };
   STATE.ultimaAula = { disc, topicoIdx }; saveState();
+  renderListaTopicosParaAula(disc, topicoIdx);
 
   const el = document.getElementById("aulaContent");
   const proxIdx = topicoIdx+1 < discObj.topicos.length ? topicoIdx+1 : null;
+  const prevIdx = topicoIdx-1 >= 0 ? topicoIdx-1 : null;
 
-  let aulaHTML;
-  if(aula){
-    aulaHTML = `
-      <h2 style="margin-bottom:4px;">${aula.topico}</h2>
-      <p style="color:var(--text-dim);font-size:12px;margin-bottom:16px;">${disc} · Tópico do Anexo IV do Edital 01/2026</p>
-      <div class="aula-secao"><h3>📖 Teoria</h3><div class="aula-body">${aula.teoria}</div></div>
-      <div class="aula-secao"><h3>💡 Exemplo</h3><div class="aula-body">${aula.exemplo}</div></div>
-      <div class="aula-secao"><h3>🎯 Dica de prova</h3><div class="aula-body">${aula.dica}</div></div>`;
+  // Cabeçalho comum
+  const titulo = aulaImp?.topico || aulaLocal?.topico || topico.split(":")[0].split(";")[0];
+  const pesoInfo = QUADRO_PROVAS[nivel].disciplinas.find(d=>d.nome===disc);
+  const pesoBadge = pesoInfo ? `<span class="pill">peso ${pesoInfo.peso} · ${pesoInfo.questoes} questões</span>` : "";
+  const fonteBadge = aulaImp ? `<span class="pill" style="background:rgba(0,184,148,.15);color:var(--accent);">✨ conteúdo importado</span>` : (aulaLocal ? `<span class="pill">aula do app</span>` : `<span class="pill" style="background:var(--bg-soft);color:var(--text-dim);">roteiro do edital</span>`);
+
+  // Corpo da aula
+  let corpo = "";
+  if(aulaImp){
+    // Introdução
+    if(aulaImp.intro) corpo += `<p style="font-size:16px;color:var(--text-dim);font-style:italic;margin-bottom:24px;">${aulaImp.intro}</p>`;
+    // Palavras-chave
+    if(Array.isArray(aulaImp.palavrasChave) && aulaImp.palavrasChave.length){
+      corpo += `<div class="kw-chips">${aulaImp.palavrasChave.map(k=>`<span class="kw-chip">${escapeHTML(k)}</span>`).join("")}</div>`;
+    }
+    // Seções (aceita HTML ou markdown básico)
+    if(Array.isArray(aulaImp.secoes)){
+      aulaImp.secoes.forEach(sec=>{
+        if(sec.titulo) corpo += `<h2>${escapeHTML(sec.titulo)}</h2>`;
+        corpo += `<div>${renderMarkdownLite(sec.conteudo||"")}</div>`;
+      });
+    } else if(aulaImp.teoria){
+      corpo += renderMarkdownLite(aulaImp.teoria);
+    }
+    // Exemplos
+    if(Array.isArray(aulaImp.exemplos) && aulaImp.exemplos.length){
+      corpo += `<h2>Exemplos resolvidos</h2>`;
+      aulaImp.exemplos.forEach((ex,i)=>{
+        corpo += `<div class="callout exemplo"><div class="callout-title">💡 Exemplo ${i+1}</div>
+          ${ex.enunciado?`<p><strong>Enunciado:</strong> ${renderMarkdownLite(ex.enunciado)}</p>`:""}
+          ${ex.resolucao?`<p><strong>Resolução:</strong> ${renderMarkdownLite(ex.resolucao)}</p>`:""}
+          ${typeof ex==='string'?renderMarkdownLite(ex):""}
+        </div>`;
+      });
+    }
+    // Dicas
+    if(Array.isArray(aulaImp.dicas) && aulaImp.dicas.length){
+      corpo += `<div class="callout dica"><div class="callout-title">🎯 Dicas de prova</div>
+        <ul>${aulaImp.dicas.map(d=>`<li>${renderMarkdownLite(d)}</li>`).join("")}</ul></div>`;
+    }
+    // Resumo
+    if(aulaImp.resumo){
+      corpo += `<div class="callout resumo"><div class="callout-title">📌 Resumo</div>${renderMarkdownLite(aulaImp.resumo)}</div>`;
+    }
+  } else if(aulaLocal){
+    corpo += aulaLocal.teoria;
+    corpo += `<div class="callout exemplo"><div class="callout-title">💡 Exemplo</div>${aulaLocal.exemplo}</div>`;
+    corpo += `<div class="callout dica"><div class="callout-title">🎯 Dica de prova</div>${aulaLocal.dica}</div>`;
   } else {
-    aulaHTML = `
-      <h2 style="margin-bottom:4px;">${topico.split(":")[0].split(";")[0]}</h2>
-      <p style="color:var(--text-dim);font-size:12px;margin-bottom:16px;">${disc} · Tópico do Anexo IV do Edital 01/2026</p>
-      <div class="aula-secao"><h3>📖 Conteúdo previsto no edital</h3>
-        <div class="aula-body"><p>${topico}</p>
-        <p style="color:var(--text-dim);font-size:12.5px;margin-top:12px;">
-          Este tópico faz parte de <strong>Conhecimentos Específicos</strong> do cargo. Não há aula escrita neste app para todos os tópicos específicos dos 36 cargos — o conteúdo acima é o que o edital cobra literalmente.<br><br>
-          <strong>Como estudar:</strong> use este texto como roteiro. Anote abaixo as leituras, referências (livros, doutrinas, legislação) e resumos que você produzir para este ponto. Suas anotações ficam salvas e viram material próprio de estudo.
-        </p></div>
-      </div>`;
+    corpo += `<p style="font-size:15.5px;">${escapeHTML(topico)}</p>
+      <div class="callout dica"><div class="callout-title">📥 Sem aula escrita para este tópico</div>
+      <p>Este tópico faz parte de <strong>Conhecimentos Específicos</strong> do seu cargo. Duas opções para transformá-lo em material de estudo:</p>
+      <ol>
+        <li>Vá em <strong>Importar conteúdo</strong> na barra lateral, copie o prompt para outra IA (ChatGPT, Claude, Gemini) gerar o material, e importe o JSON de volta.</li>
+        <li>Ou use o campo <strong>Anotações</strong> abaixo para construir seu próprio material a partir de livros e legislação.</li>
+      </ol></div>`;
   }
 
   el.innerHTML = `
-    ${aulaHTML}
-    <div class="aula-secao"><h3>📝 Suas anotações</h3>
-      <textarea id="aulaAnotacao" style="min-height:120px;" placeholder="Escreva aqui suas notas, dúvidas, macetes, referências…">${anot}</textarea>
-      <button class="btn sm" id="btnSalvarAnot" style="margin-top:8px;">Salvar anotações</button>
-    </div>
-    <div class="aula-secao"><h3>❓ Questões relacionadas</h3>
+    <article class="reader">
+      <h1>${escapeHTML(titulo)}</h1>
+      <div class="meta-aula">
+        <span>${disc}</span>
+        ${pesoBadge}
+        ${fonteBadge}
+        <span style="color:var(--text-dim);text-transform:none;letter-spacing:0;">Tópico ${topicoIdx+1} de ${discObj.topicos.length}</span>
+      </div>
+      ${corpo}
+
+      <h2>Suas anotações</h2>
+      <textarea id="aulaAnotacao" style="min-height:130px;" placeholder="Notas, dúvidas, macetes, referências, jurisprudência…">${escapeHTML(anot)}</textarea>
+      <p style="color:var(--text-dim);font-size:12px;margin-top:6px;">✓ Salvamento automático a cada tecla</p>
+
+      <h2>Questões</h2>
       <div id="aulaQuestoes"></div>
-    </div>
-    <div class="aula-navbar">
-      <button class="btn ${st==="feito"?"":"primary"}" id="btnMarcarFeito">
-        ${st==="feito"?"✓ Concluído (clique para reabrir)":"Marcar como concluído"}
-      </button>
-      ${proxIdx!==null ? `<button class="btn ghost" id="btnProxTopico">Próximo tópico →</button>`:""}
-    </div>
+
+      <div class="aula-navbar">
+        ${prevIdx!==null ? `<button class="btn ghost" id="btnPrevTopico">← Anterior</button>`:""}
+        <button class="btn ${st==="feito"?"":"primary"}" id="btnMarcarFeito" style="flex:1;">
+          ${st==="feito"?"✓ Concluído — clique para reabrir":"Marcar como concluído ✓"}
+        </button>
+        ${proxIdx!==null ? `<button class="btn primary" id="btnProxTopico">Próximo tópico →</button>`:""}
+      </div>
+    </article>
   `;
+  window.scrollTo({top:0, behavior:"smooth"});
 
   document.getElementById("aulaAnotacao").addEventListener("input", e=>{ setAnotacao(cargo,disc,topicoIdx,e.target.value); });
-  document.getElementById("btnSalvarAnot").addEventListener("click", ()=>{ toast("Anotações salvas!"); });
   document.getElementById("btnMarcarFeito").addEventListener("click", ()=>{
     const atual = getTopicoStatus(cargo,disc,topicoIdx);
     const novo = atual==="feito" ? "andamento" : "feito";
     setTopicoStatus(cargo,disc,topicoIdx,novo);
     if(novo==="feito") logTopicoConcluidoHoje(cargo);
-    renderListaTopicosParaAula(disc);
     abrirAula(disc, topicoIdx);
   });
-  if(proxIdx!==null){
-    document.getElementById("btnProxTopico").addEventListener("click", ()=> abrirAula(disc, proxIdx));
-  }
+  if(proxIdx!==null) document.getElementById("btnProxTopico").addEventListener("click", ()=> abrirAula(disc, proxIdx));
+  if(prevIdx!==null) document.getElementById("btnPrevTopico").addEventListener("click", ()=> abrirAula(disc, prevIdx));
 
-  // Questões relacionadas: 3 questões da disciplina (aleatórias)
-  const pool = getQuestoesDisponiveis(cargo, disc);
-  const escolhidas = pool.slice().sort(()=>Math.random()-0.5).slice(0,3);
-  renderQuestoesInline("aulaQuestoes", escolhidas);
+  // Questões: prioriza importadas para este tópico; senão do pool da disciplina
+  let quest = getQuestoesImportadas(disc, topico);
+  if(!quest.length){
+    const pool = getQuestoesDisponiveis(cargo, disc);
+    quest = pool.slice().sort(()=>Math.random()-0.5).slice(0,3);
+  }
+  renderQuestoesInline("aulaQuestoes", quest);
+}
+
+/* Helpers de renderização usados pelas aulas */
+function escapeHTML(s){
+  return (s||"").toString()
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+/* Renderiza texto com markdown BEM básico (negrito, itálico, listas, quebras, parágrafos).
+   Aceita também HTML já pronto — se detectar <p>, <ul>, <h1>, etc., retorna direto. */
+function renderMarkdownLite(t){
+  if(!t) return "";
+  if(typeof t !== "string") return escapeHTML(JSON.stringify(t));
+  if(/<(p|ul|ol|h[1-6]|table|div|blockquote|pre|br|strong|em)\b/i.test(t)) return t;
+  let out = escapeHTML(t);
+  // ordem: bold, italic, code, headings, listas, parágrafos
+  out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  out = out.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  out = out.replace(/`([^`]+)`/g, "<code>$1</code>");
+  out = out.replace(/^### (.+)$/gm, "<h3>$1</h3>");
+  out = out.replace(/^## (.+)$/gm, "<h2>$1</h2>");
+  // listas simples (- ou 1.)
+  out = out.replace(/(^|\n)((?:[-*] .+(?:\n|$))+)/g, (m,pre,block)=>{
+    const items = block.trim().split(/\n/).map(l=>l.replace(/^[-*] /,"").trim());
+    return pre + "<ul>"+items.map(i=>`<li>${i}</li>`).join("")+"</ul>";
+  });
+  out = out.replace(/(^|\n)((?:\d+\. .+(?:\n|$))+)/g, (m,pre,block)=>{
+    const items = block.trim().split(/\n/).map(l=>l.replace(/^\d+\. /,"").trim());
+    return pre + "<ol>"+items.map(i=>`<li>${i}</li>`).join("")+"</ol>";
+  });
+  // parágrafos (linhas em branco)
+  out = out.split(/\n{2,}/).map(par=>{
+    if(/^<(ul|ol|h[1-6]|blockquote|div|p)/.test(par.trim())) return par;
+    return "<p>"+par.replace(/\n/g,"<br>")+"</p>";
+  }).join("\n");
+  return out;
 }
 
 function renderQuestoesInline(containerId, questoes){
   const el = document.getElementById(containerId);
   el.innerHTML = questoes.map((q,qi)=>`
     <div class="qcard" data-q-inline-idx="${qi}">
-      ${q.gerada?'<div class="badge warn" style="margin-bottom:6px;">Fixação gerada do Anexo IV</div>':''}
+      ${q.importada?'<div class="badge ok" style="margin-bottom:6px;">✨ Questão importada</div>':(q.gerada?'<div class="badge warn" style="margin-bottom:6px;">Fixação gerada do Anexo IV</div>':'')}
       <p style="font-weight:700;">${qi+1}. ${q.enunciado}</p>
       ${q.alternativas.map((a,ai)=>`<div class="opt" data-inline-opt data-qi="${qi}" data-ai="${ai}"><span>${String.fromCharCode(65+ai)})</span><span>${a}</span></div>`).join("")}
       <div class="gabarito" data-gabarito="${qi}" style="display:none;margin-top:10px;padding:12px;background:var(--brand-dim);border-radius:10px;font-size:12.8px;">
@@ -2484,6 +2672,245 @@ function chartUpsert(id, type, data, options={}){
 }
 
 /* ---------------------- 18. AJUDA ---------------------- */
+/* ---------------- IMPORTAR CONTEÚDO ---------------- */
+const PROMPT_TEMPLATE = `Você é um professor especialista em concursos públicos brasileiros. Sua tarefa é produzir MATERIAL DE ESTUDO COMPLETO E APROFUNDADO para o Concurso Público da Prefeitura de Contagem/MG (Edital nº 01/2026), no cargo abaixo indicado, seguindo EXATAMENTE o formato JSON descrito no final.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CARGO ESCOLHIDO: [PREENCHA — ex.: 501 - Analista de TI]
+NÍVEL: [médio | superior]
+DISCIPLINA: [PREENCHA — ex.: Língua Portuguesa | Raciocínio Lógico | Noções de Informática | Conhecimentos Gerais do Município | Conhecimentos Específicos]
+TÓPICOS A COBRIR: [cole aqui a lista de tópicos que quer estudar; se vazio, cubra todos os tópicos oficiais da disciplina para o cargo]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FONTES AUTORITATIVAS (consulte antes de escrever):
+- Edital nº 01/2026:  https://portal.contagem.mg.gov.br/editais/edital_n_01_2026_14013815.pdf
+- Anexo III (Quadro de Provas):  https://portal.contagem.mg.gov.br/editais/03_-_anexo_iii_-_quadro_de_provas_14015956.pdf
+- Anexo IV (Conteúdos Programáticos):  https://portal.contagem.mg.gov.br/editais/04_-_anexo_iv_-_conteudos_programAticos_14020217.pdf
+
+INSTRUÇÕES DE CONTEÚDO (siga TODAS):
+
+1. Para CADA tópico da disciplina, gere UMA aula com PROFUNDIDADE de professor experiente — não superficial. Cada aula deve permitir a alguém que nunca viu o assunto entender e resolver questões da prova.
+
+2. Estrutura mínima por aula:
+   - "intro": 2 a 4 frases situando o assunto e por que ele cai na prova.
+   - "palavrasChave": 5 a 10 termos técnicos essenciais.
+   - "secoes": de 3 a 8 seções, cada uma com "titulo" e "conteudo" (400 a 900 palavras cada seção). Use Markdown básico: **negrito**, *itálico*, listas com "- ", listas numeradas "1. ", cabeçalhos "## " ou "### ", tabelas simples. Cubra fundamentos, casos especiais, jurisprudência ou normas quando aplicável, comparações, pegadinhas típicas de banca.
+   - "exemplos": pelo menos 2 exemplos, cada um com "enunciado" e "resolucao" passo a passo.
+   - "dicas": lista de 3 a 6 dicas práticas e macetes (frases curtas).
+   - "resumo": um mini-resumo em bullet points do que o candidato precisa levar para a prova.
+   - "questoes": EXATAMENTE 10 questões inéditas de múltipla escolha (5 alternativas cada), estilo banca de concurso. Para cada questão: "enunciado", "alternativas" (array de 5 strings), "correta" (índice 0-4), "dificuldade" ("Fácil"|"Média"|"Difícil") e "explicacao" (justificativa detalhada da correta E por que cada uma das outras está errada).
+
+3. Priorize a legislação e a doutrina realmente vigentes no Brasil:
+   - Constituição Federal de 1988 (atualizada)
+   - Nova Lei de Licitações (14.133/2021)
+   - LGPD (13.709/2018) e LAI (12.527/2011)
+   - Novo Acordo Ortográfico (Português)
+   - Para Contagem: Lei Orgânica do Município, Lei Municipal nº 2.160/1990 (Estatuto do Servidor) e Lei Municipal nº 105/2011 (Plano de Cargos).
+   - Cite leis, artigos e conceitos com precisão. Se houver divergência doutrinária, mencione as principais correntes.
+
+4. Linguagem: didática, direta, técnica quando preciso, com exemplos concretos do dia a dia da administração pública municipal.
+
+5. Não invente jurisprudência nem números. Se não tiver certeza de um dado, ou omita, ou marque com "verifique na fonte oficial".
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FORMATO DE SAÍDA (OBRIGATÓRIO — apenas UM bloco JSON válido, sem texto antes/depois):
+
+\`\`\`json
+{
+  "meta": {
+    "concurso": "Prefeitura de Contagem/MG - Edital 01/2026",
+    "cargo": "501 - Analista de TI",
+    "disciplina": "Língua Portuguesa",
+    "geradoEm": "2026-01-15"
+  },
+  "aulas": [
+    {
+      "disciplina": "Língua Portuguesa",
+      "topico": "Concordância verbal",
+      "intro": "…",
+      "palavrasChave": ["verbo","sujeito","voz passiva","haver impessoal"],
+      "secoes": [
+        {"titulo": "Regra geral", "conteudo": "..."},
+        {"titulo": "Casos especiais (haver, fazer, sujeito composto)", "conteudo": "..."},
+        {"titulo": "Voz passiva sintética", "conteudo": "..."}
+      ],
+      "exemplos": [
+        {"enunciado": "Complete: '___ muitos candidatos na sala.'", "resolucao": "Como 'haver' aqui significa 'existir', é impessoal → 'Havia'."}
+      ],
+      "dicas": [
+        "Verbo 'haver' no sentido de existir → sempre singular.",
+        "Voz passiva sintética exige concordância com o sujeito paciente."
+      ],
+      "resumo": "- 'Haver' e 'fazer' impessoais → singular\\n- Sujeito composto anteposto → plural\\n- 'Aluga-se casas' está errado; certo é 'Alugam-se casas'",
+      "questoes": [
+        {
+          "enunciado": "Assinale a alternativa correta quanto à concordância verbal.",
+          "alternativas": [
+            "Fazem dois anos que espero.",
+            "Existe muitas soluções.",
+            "Aluga-se casas neste bairro.",
+            "Havia muitos candidatos na sala.",
+            "Devem haver soluções."
+          ],
+          "correta": 3,
+          "dificuldade": "Média",
+          "explicacao": "Correta: (d) 'haver' no sentido de existir é impessoal. Erros: (a) 'faz' é impessoal quando indica tempo; (b) 'existir' é pessoal — 'existem'; (c) voz passiva sintética exige 'alugam-se'; (e) auxiliar de impessoal também fica no singular."
+        }
+      ]
+    }
+  ]
+}
+\`\`\`
+
+NÃO acrescente texto de introdução ou despedida — apenas o bloco JSON.
+`;
+
+function renderImportar(){
+  const nAulas = STATE.conteudoImportado?.aulas?.length || 0;
+  document.getElementById("view-importar").innerHTML = `
+    <div class="helpbox">
+      <strong>Como funciona:</strong> o conteúdo genérico embutido neste app é limitado. Para transformar o app em um material de estudo profundo, gere as aulas em outra IA (ChatGPT, Claude, Gemini, DeepSeek…) usando o prompt abaixo e importe o JSON de volta. As aulas importadas aparecem automaticamente na aba "Aulas", marcadas com ✨, e as questões também entram no simulado.
+    </div>
+
+    <div class="grid cols-2" style="margin-bottom:16px;">
+      <div class="card">
+        <h3>Status atual</h3>
+        <p style="font-size:28px;font-weight:800;margin:6px 0;">${nAulas}</p>
+        <p style="color:var(--text-dim);font-size:12.5px;">aula(s) importada(s) no total.</p>
+        <button class="btn danger sm" id="btnLimparImportado" ${nAulas?'':'disabled'}>Limpar conteúdo importado</button>
+      </div>
+      <div class="card">
+        <h3>Importar JSON</h3>
+        <p style="color:var(--text-dim);font-size:12.5px;">Selecione um arquivo <code>.json</code> gerado pela outra IA.</p>
+        <input type="file" id="fileConteudo" accept="application/json,.json" style="display:none;">
+        <div class="row">
+          <button class="btn primary" id="btnUploadConteudo">📥 Selecionar arquivo JSON</button>
+          <button class="btn" id="btnColarConteudo">📋 Colar JSON manualmente</button>
+        </div>
+        <p style="color:var(--text-dim);font-size:11.5px;margin-top:8px;">O arquivo pode conter uma única disciplina ou várias; sucessivas importações acumulam (não sobrescrevem).</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Escolha o cargo e a disciplina</strong> que quer aprofundar. Copie o prompt abaixo e substitua os campos entre colchetes (CARGO, NÍVEL, DISCIPLINA, TÓPICOS).
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Cole o prompt em outra IA</strong> (ChatGPT, Claude, Gemini, DeepSeek, Perplexity…). Peça para ela abrir os PDFs oficiais do edital (links já no prompt) e gerar o JSON.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Salve a resposta como arquivo <code>.json</code></strong> (só o bloco JSON, sem texto extra) e importe aqui. Repita para cada disciplina/tópico que quiser aprofundar.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Estude na aba "Aulas"</strong> — os tópicos com aula importada mostram o selo ✨ na lista lateral e são exibidos com layout de leitura completo (introdução, seções, exemplos, dicas, resumo, palavras-chave e 10 questões com gabarito comentado).
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+        <h3 style="margin:0;">Prompt para copiar</h3>
+        <div class="row" style="flex:0 0 auto;">
+          <button class="btn sm primary" id="btnCopiarPrompt">📋 Copiar prompt</button>
+          <button class="btn sm" id="btnBaixarPrompt">⬇ Baixar como .txt</button>
+        </div>
+      </div>
+      <div class="prompt-box" id="promptBoxTexto">${escapeHTML(PROMPT_TEMPLATE)}</div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3>Aulas já importadas</h3>
+      <div id="importadasList"></div>
+    </div>
+  `;
+
+  // Event bindings
+  document.getElementById("btnCopiarPrompt").addEventListener("click", ()=>{
+    navigator.clipboard.writeText(PROMPT_TEMPLATE).then(()=> toast("Prompt copiado! Cole em outra IA.")).catch(()=> toast("Não foi possível copiar. Selecione manualmente."));
+  });
+  document.getElementById("btnBaixarPrompt").addEventListener("click", ()=>{
+    const b = new Blob([PROMPT_TEMPLATE], {type:"text/plain;charset=utf-8"});
+    const u = URL.createObjectURL(b);
+    const a = document.createElement("a"); a.href=u; a.download="prompt-contagem-2026.txt";
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(u);
+    toast("Prompt salvo!");
+  });
+  document.getElementById("btnUploadConteudo").addEventListener("click", ()=> document.getElementById("fileConteudo").click());
+  document.getElementById("fileConteudo").addEventListener("change", e=>{
+    if(e.target.files[0]) importarConteudoDeEstudo(e.target.files[0]);
+    e.target.value = "";
+  });
+  document.getElementById("btnColarConteudo").addEventListener("click", ()=>{
+    const txt = prompt("Cole aqui o JSON gerado pela IA:");
+    if(txt) importarConteudoDeEstudoTexto(txt);
+  });
+  document.getElementById("btnLimparImportado").addEventListener("click", ()=>{
+    if(!confirm("Remover todas as aulas importadas? Isso não afeta seu progresso ou anotações.")) return;
+    STATE.conteudoImportado = { aulas: [], meta: null };
+    saveState(); renderImportar(); toast("Conteúdo importado removido.");
+  });
+  renderImportadasList();
+}
+
+function renderImportadasList(){
+  const arr = STATE.conteudoImportado?.aulas || [];
+  const el = document.getElementById("importadasList");
+  if(!el) return;
+  if(!arr.length){ el.innerHTML = `<p class="empty">Nenhuma aula importada ainda. Use o prompt acima para gerar.</p>`; return; }
+  el.innerHTML = arr.map((a,i)=>`
+    <div class="topic-row">
+      <span class="txt"><strong>${escapeHTML(a.disciplina||"?")}</strong> — ${escapeHTML(a.topico||"?")}</span>
+      <span class="badge">${(a.questoes||[]).length} questões</span>
+      <span class="badge brand">${(a.secoes||[]).length} seções</span>
+      <button class="btn danger sm" data-del-imp="${i}">✕</button>
+    </div>`).join("");
+  el.querySelectorAll("[data-del-imp]").forEach(b=> b.addEventListener("click", ()=>{
+    const i = parseInt(b.dataset.delImp);
+    STATE.conteudoImportado.aulas.splice(i,1);
+    saveState(); renderImportadasList(); toast("Aula removida.");
+  }));
+}
+
+function importarConteudoDeEstudo(file){
+  const r = new FileReader();
+  r.onload = e => importarConteudoDeEstudoTexto(e.target.result);
+  r.readAsText(file);
+}
+
+function importarConteudoDeEstudoTexto(txt){
+  try{
+    // aceita bloco cercado por ```json …``` também
+    let s = txt.trim();
+    const m = s.match(/```(?:json)?\s*([\s\S]+?)```/);
+    if(m) s = m[1].trim();
+    const data = JSON.parse(s);
+    if(!data.aulas || !Array.isArray(data.aulas)) throw new Error("JSON deve ter uma chave 'aulas' com array.");
+    // valida cada aula rapidamente
+    const validas = data.aulas.filter(a => a && a.disciplina && a.topico);
+    if(!validas.length) throw new Error("Nenhuma aula válida (precisa ter 'disciplina' e 'topico').");
+    if(!STATE.conteudoImportado) STATE.conteudoImportado = {aulas:[], meta:null};
+    STATE.conteudoImportado.aulas = STATE.conteudoImportado.aulas.concat(validas);
+    if(data.meta) STATE.conteudoImportado.meta = data.meta;
+    saveState();
+    toast(`${validas.length} aula(s) importada(s) com sucesso!`);
+    renderImportar();
+  } catch(err){
+    console.error(err);
+    alert("Não foi possível importar o JSON.\n\nErro: " + err.message + "\n\nVerifique se o arquivo é um JSON válido no formato descrito no prompt.");
+  }
+}
+
 function renderAjuda(){
   document.getElementById("view-ajuda").innerHTML = `
     <div class="helpbox">
@@ -2564,7 +2991,7 @@ const RENDERERS = {
   dashboard: renderDashboard, aulas: renderAulas, cronograma: renderCronograma,
   disciplinas: renderDisciplinas, simulados: renderSimulados, flashcards: renderFlashcards,
   resumao: renderResumao, glossario: renderGlossario, estatisticas: renderEstatisticas,
-  ajuda: renderAjuda, config: renderConfig
+  importar: renderImportar, ajuda: renderAjuda, config: renderConfig
 };
 
 /* ---------------------- 22. EVENTS ---------------------- */
