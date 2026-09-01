@@ -178,6 +178,7 @@ th{color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:
 .aula-body table{margin:10px 0;font-size:12.5px;}
 .aula-body table td,.aula-body table th{padding:5px 10px;border:1px solid var(--border);text-align:center;}
 .aula-navbar{margin-top:22px;display:flex;gap:10px;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;}
+.resumo-item:hover{background:var(--brand-dim)!important;transform:translateY(-1px);box-shadow:var(--shadow);}
 /* Layout de leitura para aulas — tipografia rica */
 .reader{max-width:760px;margin:0 auto;padding:8px 4px;}
 .reader h1{font-size:26px;line-height:1.25;margin-bottom:6px;}
@@ -1804,16 +1805,54 @@ function flashcardsParaHoje(cargo){
   return STATE.flashcards.filter(c => c.cargo === cargo && c.proxima <= h);
 }
 function gerarFlashcardsDoEdital(cargo, disciplina, qtd){
-  const d = getDisciplinasDoCargo(cargo).find(d=>d.nome===disciplina);
-  if(!d) return 0;
-  const t = d.topicos.slice();
-  for(let i=t.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [t[i],t[j]]=[t[j],t[i]]; }
-  const esc = t.slice(0, qtd);
-  esc.forEach(topico=>{
-    const p = topico.split(":");
-    criarFlashcard(disciplina, cargo, `O que abrange o tópico "${p[0].trim()}" (${disciplina})?`, p.slice(1).join(":").trim() || topico);
+  // Prioriza aulas integradas (frente=tópico, verso=resumo/intro real). Complementa com tópicos do edital se faltar.
+  const aulasIntegr = (typeof CONTEUDO_INTEGRADO !== "undefined" ? CONTEUDO_INTEGRADO.aulas : []) || [];
+  const dn = normStr(disciplina);
+  const isEspec = disciplina === "Conhecimentos Específicos";
+  const doDisc = aulasIntegr.filter(a => normStr(a.disciplina||"") === dn && (!isEspec || !a._cargo || a._cargo === cargo));
+  const criados = [];
+  const emb = doDisc.slice().sort(()=>Math.random()-0.5).slice(0, qtd);
+  emb.forEach(a=>{
+    const frente = `Explique: ${a.topico}`;
+    const verso = a.resumo || a.intro || (a.secoes?.[0]?.conteudo?.slice(0,300) + "...") || a.topico;
+    criados.push(criarFlashcard(disciplina, cargo, frente, verso));
   });
-  return esc.length;
+  // Se ainda faltam, completa com tópicos do edital
+  if(criados.length < qtd){
+    const d = getDisciplinasDoCargo(cargo).find(d=>d.nome===disciplina);
+    if(d){
+      const t = d.topicos.slice();
+      for(let i=t.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [t[i],t[j]]=[t[j],t[i]]; }
+      t.slice(0, qtd - criados.length).forEach(topico=>{
+        const p = topico.split(":");
+        criados.push(criarFlashcard(disciplina, cargo, `O que abrange "${p[0].trim()}"?`, p.slice(1).join(":").trim() || topico));
+      });
+    }
+  }
+  return criados.length;
+}
+
+/* Popula um deck inicial automaticamente na primeira vez que o usuário abre o cargo.
+   Cria 1 flashcard por aula do cargo (todas as disciplinas), até um teto razoável. */
+function popularFlashcardsAutomaticamente(cargo){
+  // já foi populado?
+  const jaTem = STATE.flashcards.some(c => c.cargo === cargo && c._auto);
+  if(jaTem) return 0;
+  const aulas = (typeof CONTEUDO_INTEGRADO !== "undefined" ? CONTEUDO_INTEGRADO.aulas : []) || [];
+  const discsDoCargo = new Set(getDisciplinasDoCargo(cargo).map(d=>d.nome));
+  let criados = 0;
+  aulas.forEach(a=>{
+    const disc = a.disciplina || "";
+    if(!discsDoCargo.has(disc)) return;
+    if(disc === "Conhecimentos Específicos" && a._cargo && a._cargo !== cargo) return;
+    const frente = `Explique: ${a.topico}`;
+    const verso = a.resumo || a.intro || (a.secoes?.[0]?.conteudo?.slice(0,300) + "...") || a.topico;
+    const card = criarFlashcard(disc, cargo, frente, verso);
+    card._auto = true;
+    criados++;
+  });
+  if(criados > 0) saveState();
+  return criados;
 }
 
 /* ---------------------- 6. POMODORO ---------------------- */
@@ -2578,31 +2617,41 @@ function renderTodosFlashcards(){
 /* ---------------------- 15. RESUMÃO ---------------------- */
 function renderResumao(){
   const cargo = STATE.cargoSelecionado;
-  const nivel = getCargoLevel(cargo);
   const discs = getDisciplinasDoCargo(cargo);
+  const arr = (typeof CONTEUDO_INTEGRADO !== "undefined" ? CONTEUDO_INTEGRADO.aulas : []) || [];
+
   document.getElementById("view-resumao").innerHTML = `
     <div class="helpbox">
-      <strong>Resumão:</strong> síntese em uma tela dos pontos-chave de cada disciplina, para revisão rápida na véspera da prova.
+      <strong>Resumão:</strong> o essencial de cada disciplina em uma tela só, ideal para revisão rápida na véspera da prova. Clique em qualquer tópico para abrir a aula completa.
     </div>
     ${discs.map(d=>{
-      const aulas = getAulasDaDisciplina(d.nome, nivel);
-      const isEspec = d.especifica;
+      const aulasDisc = arr.filter(a => normStr(a.disciplina||"") === normStr(d.nome) && (d.nome !== "Conhecimentos Específicos" || !a._cargo || a._cargo === cargo));
       const totalTop = d.topicos.length;
       const feitos = d.topicos.filter((_,i)=>getTopicoStatus(cargo,d.nome,i)==="feito").length;
-      return `<div class="card" style="margin-bottom:14px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-          <h3 style="margin:0;">${d.nome}</h3>
+      return `<div class="card" style="margin-bottom:16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <h3 style="margin:0;font-size:15px;color:var(--text);text-transform:none;letter-spacing:0;">${d.nome}</h3>
           <span class="badge">${feitos}/${totalTop} concluídos</span>
         </div>
-        ${aulas.length ? `
-          <p style="color:var(--text-dim);font-size:12px;margin-bottom:12px;">${aulas.length} aula(s) escritas para esta disciplina.</p>
-          <ul style="margin:0;padding-left:20px;line-height:1.9;">
-            ${aulas.map(a=>`<li><strong>${a.topico}</strong>: ${stripHTML(a.teoria).slice(0,180)}…</li>`).join("")}
-          </ul>` : `
-          <p style="color:var(--text-dim);font-size:12.5px;">Conteúdo específico do cargo. Confira a íntegra em <a href="#" onclick="abrirDisciplinaEmAulas('${d.nome.replace(/'/g,"\\'")}');return false;">Aulas</a>.</p>
-          <ul style="margin:0;padding-left:20px;line-height:1.7;font-size:12.5px;">
-            ${d.topicos.slice(0,10).map(t=>`<li>${t.slice(0,140)}${t.length>140?"…":""}</li>`).join("")}
-            ${d.topicos.length>10?`<li><em>… e mais ${d.topicos.length-10} tópicos.</em></li>`:""}
+        ${aulasDisc.length ? `
+          <div style="display:grid;grid-template-columns:1fr;gap:14px;">
+            ${aulasDisc.map((a,i)=>{
+              const topicoIdxNoEdital = d.topicos.findIndex(t=>{
+                const at = normStr(a.topico||""), tt = normStr(t);
+                return at===tt || tt.startsWith(at.slice(0,40)) || at.startsWith(tt.slice(0,40));
+              });
+              const resumoTxt = a.resumo || a.intro || "";
+              return `<div class="resumo-item" onclick="abrirDisciplinaEmAulas('${d.nome.replace(/'/g,"\\'")}')" style="cursor:pointer;padding:14px 16px;background:var(--bg-soft);border-radius:12px;border-left:3px solid var(--brand);transition:.15s;">
+                <div style="font-weight:800;font-size:13.5px;margin-bottom:8px;color:var(--text);">${escapeHTML(a.topico)}</div>
+                <div style="font-size:13px;line-height:1.65;color:var(--text-dim);">${renderMarkdownLite(resumoTxt)}</div>
+                ${a.palavrasChave?.length ? `<div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:5px;">${a.palavrasChave.slice(0,6).map(k=>`<span style="font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;background:var(--brand-dim);color:var(--brand);">${escapeHTML(k)}</span>`).join("")}</div>`:""}
+              </div>`;
+            }).join("")}
+          </div>` : `
+          <p style="color:var(--text-dim);font-size:13px;">Aulas em preparação para esta disciplina do cargo. Veja o roteiro na <a href="#" onclick="abrirDisciplinaEmAulas('${d.nome.replace(/'/g,"\\'")}');return false;">aba Aulas</a>.</p>
+          <ul style="margin:8px 0 0;padding-left:20px;line-height:1.75;font-size:12.5px;">
+            ${d.topicos.slice(0,10).map(t=>`<li>${escapeHTML(t.length>140?t.slice(0,140)+"...":t)}</li>`).join("")}
+            ${d.topicos.length>10?`<li><em>e mais ${d.topicos.length-10} tópicos</em></li>`:""}
           </ul>`}
       </div>`;
     }).join("")}
@@ -2646,23 +2695,83 @@ const GLOSSARIO = [
   {termo:"Voz passiva sintética", def:"Construção com pronome 'se': 'Vendem-se casas'. Verbo concorda com o sujeito paciente (casas → plural)."},
   {termo:"Crase", def:"Fusão da preposição 'a' com o artigo 'a(s)' ou pronomes demonstrativos. Marcada por acento grave: à."}
 ];
+/* Constrói o glossário completo: hardcoded + palavrasChave de todas as aulas do cargo,
+   com definição extraída do conteúdo real da aula (primeira sentença que menciona o termo). */
+let GLOSSARIO_CACHE = null;
+function buildGlossarioCompleto(){
+  const aulas = (typeof CONTEUDO_INTEGRADO !== "undefined" ? CONTEUDO_INTEGRADO.aulas : []) || [];
+  const cargo = STATE.cargoSelecionado;
+  const discsDoCargo = new Set(getDisciplinasDoCargo(cargo).map(d=>d.nome));
+  const mapa = new Map(); // termo (normalizado) -> {termo, def, disciplina, topico}
+
+  // 1) hardcoded
+  GLOSSARIO.forEach(g=>{
+    mapa.set(normStr(g.termo), {termo:g.termo, def:g.def, disciplina:"", topico:""});
+  });
+
+  function extrairDefinicao(termo, aula){
+    const txt = [aula.intro||"", ...(aula.secoes||[]).map(s=>s.conteudo||"")].join(" ");
+    const clean = txt.replace(/\*+/g,"").replace(/\s+/g," ");
+    // Regex tolerante: acha frase que contém o termo (ignora case/acento)
+    const tNorm = normStr(termo);
+    const frases = clean.split(/(?<=[.!?])\s+/);
+    for(const fr of frases){
+      if(normStr(fr).includes(tNorm) && fr.length > 40 && fr.length < 500){
+        return fr.trim();
+      }
+    }
+    // fallback: intro toda ou primeiros 220 chars
+    return (aula.intro || clean.slice(0, 220) + "...").trim();
+  }
+
+  // 2) palavrasChave de aulas do cargo
+  aulas.forEach(a=>{
+    if(!discsDoCargo.has(a.disciplina)) return;
+    if(a.disciplina === "Conhecimentos Específicos" && a._cargo && a._cargo !== cargo) return;
+    (a.palavrasChave||[]).forEach(k=>{
+      const key = normStr(k);
+      if(!key || key.length < 2) return;
+      if(mapa.has(key)) return; // não sobrescreve hardcoded
+      mapa.set(key, {
+        termo: k.charAt(0).toUpperCase() + k.slice(1),
+        def: extrairDefinicao(k, a),
+        disciplina: a.disciplina,
+        topico: a.topico
+      });
+    });
+  });
+
+  // ordena alfabético
+  const arr = Array.from(mapa.values()).sort((a,b)=> a.termo.localeCompare(b.termo, 'pt-BR'));
+  return arr;
+}
+
 function renderGlossario(){
+  GLOSSARIO_CACHE = buildGlossarioCompleto();
   document.getElementById("view-glossario").innerHTML = `
-    <div class="card" style="margin-bottom:14px;">
-      <input type="text" id="glossFilter" placeholder="Buscar termo…">
+    <div class="helpbox">
+      <strong>${GLOSSARIO_CACHE.length}</strong> termos-chave do edital com definição direta. Clique num termo para abrir a aula relacionada (quando houver).
+    </div>
+    <div class="card" style="margin-bottom:14px;position:sticky;top:70px;z-index:5;">
+      <input type="text" id="glossFilter" placeholder="🔎 Buscar termo…" style="font-size:14px;padding:12px 14px;">
     </div>
     <div class="card"><div id="glossList"></div></div>`;
   renderGlossListado("");
   document.getElementById("glossFilter").addEventListener("input", e=> renderGlossListado(e.target.value));
 }
 function renderGlossListado(filtro){
-  const f = filtro.trim().toLowerCase();
-  const arr = GLOSSARIO.filter(g => !f || g.termo.toLowerCase().includes(f) || g.def.toLowerCase().includes(f));
-  document.getElementById("glossList").innerHTML = arr.length ? arr.map(g=>`
-    <div class="topic-row" style="display:block;">
-      <strong>${g.termo}</strong><br>
-      <span style="color:var(--text-dim);font-size:12.8px;">${g.def}</span>
-    </div>`).join("") : `<p class="empty">Nenhum termo encontrado.</p>`;
+  const f = normStr(filtro);
+  const arr = (GLOSSARIO_CACHE||[]).filter(g => !f || normStr(g.termo).includes(f) || normStr(g.def).includes(f));
+  document.getElementById("glossList").innerHTML = arr.length ? arr.map(g=>{
+    const linkDisc = g.disciplina ? `<a href="#" onclick="abrirDisciplinaEmAulas('${g.disciplina.replace(/'/g,"\\'")}');return false;" style="font-size:11px;color:var(--brand);font-weight:700;text-decoration:none;">↗ ${escapeHTML(g.disciplina)}</a>` : "";
+    return `<div class="topic-row" style="display:block;padding:14px 4px;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;flex-wrap:wrap;gap:8px;">
+        <strong style="font-size:14px;color:var(--text);">${escapeHTML(g.termo)}</strong>
+        ${linkDisc}
+      </div>
+      <span style="color:var(--text-dim);font-size:13px;line-height:1.6;">${escapeHTML(g.def)}</span>
+    </div>`;
+  }).join("") : `<p class="empty">Nenhum termo encontrado para "${escapeHTML(filtro)}".</p>`;
 }
 
 /* ---------------------- 17. ESTATÍSTICAS ---------------------- */
@@ -2786,9 +2895,10 @@ function bindEvents(){
   document.getElementById("menuToggle").addEventListener("click", ()=> document.getElementById("sidebar").classList.toggle("open"));
   document.getElementById("cargoPick").addEventListener("change", e=>{
     STATE.cargoSelecionado = e.target.value; saveState(); populateDisciplinaSelects();
+    const n = popularFlashcardsAutomaticamente(STATE.cargoSelecionado);
     const active = document.querySelector(".navbtn.active").dataset.view;
     RENDERERS[active] && RENDERERS[active]();
-    toast("Cargo: " + getCargoInfo(STATE.cargoSelecionado).nome);
+    toast(n>0 ? `Cargo alterado. ${n} flashcards prontos!` : "Cargo: " + getCargoInfo(STATE.cargoSelecionado).nome);
   });
   document.getElementById("themeToggle").addEventListener("click", ()=>{
     const escuro = document.documentElement.getAttribute("data-theme")==="dark" || (STATE.config.tema==="auto" && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -2895,6 +3005,7 @@ function initUI(){
   populateDisciplinaSelects();
   aplicarTema();
   resetPomo();
+  popularFlashcardsAutomaticamente(STATE.cargoSelecionado);
   goToView("dashboard");
 }
 document.addEventListener("DOMContentLoaded", ()=>{ bindEvents(); initUI(); });
