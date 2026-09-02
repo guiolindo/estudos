@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "disciplina": "Língua Portuguesa",
+    "banca": "IBGP",
+    "estilo": "real"
+  },
+  "blocos": [
+    {
+      "topico": "Compreensão e interpretação de textos",
+      "questoes": [
+        {
+          "textoBase": "TEXTO I\n\nA leitura sempre foi, para mim, uma forma de viajar sem sair do lugar. Na infância, os livros me levavam a mundos fantásticos; na adolescência, me apresentaram a culturas e ideias que eu jamais imaginara. Hoje, como professor, percebo que muitos jovens não experimentam esse prazer. A escola, infelizmente, muitas vezes transforma a leitura em obrigação, em tarefa burocrática, e não em descoberta.\n\nNão se trata de culpar os professores, que enfrentam salas lotadas e programas extensos, mas de repensar o papel da literatura na formação. Quando um estudante lê apenas para responder a questionários ou fazer provas, ele dificilmente desenvolverá o hábito de ler por fruição. É preciso apresentar a leitura como um ato de liberdade, de encontro consigo mesmo e com o outro.\n\nOs benefícios da leitura vão além do desempenho escolar: ela amplia o vocabulário, desenvolve a empatia, estimula o senso crítico e oferece repertório para lidar com as próprias emoções. Contudo, esses efeitos só se manifestam quando a leitura é significativa, quando o leitor se envolve com o texto e estabelece conexões com sua vida.\n\nDefendo, portanto, que as escolas reservem momentos de leitura livre, sem cobranças imediatas, e que os educadores atuem como mediadores, sugerindo obras que dialoguem com os interesses dos alunos. Só assim formaremos leitores para toda a vida, e não apenas para o vestibular.\n\n(Adaptado de: SOUZA, Mariana. O prazer de ler. Revista Educação em Foco, n. 45, 2025.)",
+          "enunciado": "Segundo o Texto I, a autora defende que a escola deve:",
+          "alternativas": [
+            "substituir as avaliações de leitura por atividades lúdicas que não exijam nenhum tipo de resposta escrita.",
+            "priorizar a leitura de clássicos da literatura universal, pois são obras que garantem o prazer estético.",
+            "reservar momentos de leitura livre, sem cobranças imediatas, e que os educadores sugiram obras ligadas aos interesses dos alunos.",
+            "exigir que os estudantes leiam apenas livros escolhidos pelos professores, a fim de garantir qualidade literária.",
+            "eliminar qualquer tipo de questionário ou prova sobre leitura, pois esses instrumentos são inúteis para a formação."
+          ],
+          "correta": 2,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (C): A autora afirma explicitamente que defende 'momentos de leitura livre, sem cobranças imediatas' e mediação dos educadores com obras ligadas aos interesses dos alunos. \nERRADAS: (A) extrapola ao dizer 'não exijam nenhum tipo de resposta escrita'; o texto fala em 'sem cobranças imediatas', não em abolir toda escrita. (B) distorce: o texto não menciona clássicos universais nem prioridade de prazer estético. (D) contraria a proposta, que sugere dialogar com interesses dos alunos, não impor apenas escolhas docentes. (E) exagera ao afirmar que questionários são 'inúteis'; o texto critica o excesso, não a utilidade em si."
+        },
+        {
+          "textoBase": "TEXTO I\n\nA leitura sempre foi, para mim, uma forma de viajar sem sair do lugar. Na infância, os livros me levavam a mundos fantásticos; na adolescência, me apresentaram a culturas e ideias que eu jamais imaginara. Hoje, como professor, percebo que muitos jovens não experimentam esse prazer. A escola, infelizmente, muitas vezes transforma a leitura em obrigação, em tarefa burocrática, e não em descoberta.\n\nNão se trata de culpar os professores, que enfrentam salas lotadas e programas extensos, mas de repensar o papel da literatura na formação. Quando um estudante lê apenas para responder a questionários ou fazer provas, ele dificilmente desenvolverá o hábito de ler por fruição. É preciso apresentar a leitura como um ato de liberdade, de encontro consigo mesmo e com o outro.\n\nOs benefícios da leitura vão além do desempenho escolar: ela amplia o vocabulário, desenvolve a empatia, estimula o senso crítico e oferece repertório para lidar com as próprias emoções. Contudo, esses efeitos só se manifestam quando a leitura é significativa, quando o leitor se envolve com o texto e estabelece conexões com sua vida.\n\nDefendo, portanto, que as escolas reservem momentos de leitura livre, sem cobranças imediatas, e que os educadores atuem como mediadores, sugerindo obras que dialoguem com os interesses dos alunos. Só assim formaremos leitores para toda a vida, e não apenas para o vestibular.\n\n(Adaptado de: SOUZA, Mariana. O prazer de ler. Revista Educação em Foco, n. 45, 2025.)",
+          "enunciado": "No Texto I, a expressão 'tarefa burocrática' (1º parágrafo) é usada para:",
+          "alternativas": [
+            "elogiar a organização das atividades de leitura nas escolas.",
+            "criticar a transformação da leitura em obrigação sem sentido.",
+            "indicar que a burocracia escolar é necessária ao ensino.",
+            "sugerir que os professores são excessivamente organizados.",
+            "defender a padronização dos questionários de leitura."
+          ],
+          "correta": 1,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (B): A autora usa 'tarefa burocrática' em contraposição a 'descoberta', criticando a leitura como obrigação sem prazer. \nERRADAS: (A) inverte o sentido: não há elogio. (C) distorce: a burocracia é vista negativamente, não como necessária. (D) extrapola: não se fala em organização docente. (E) contraria: a crítica é justamente à padronização excessiva."
+        },
+        {
+          "textoBase": "TEXTO II\n\nA cidade acordou em silêncio naquela manhã de domingo. As ruas vazias pareciam cenários de um filme antigo, onde cada esquina guardava uma memória. Seu Joaquim, o padeiro, abriu as portas da padaria como fazia há quarenta anos. O cheiro de pão quente invadia a calçada e despertava os primeiros fregueses.\n\nDona Marta, viúva, passava por ali todos os dias para comprar uma broa e conversar um pouco. 'É o meu momento de companhia', dizia, com um sorriso tímido. Naquele dia, porém, algo mudou: Seu Joaquim anunciou que venderia a padaria. 'A idade chegou, dona Marta. Não tenho mais forças para acordar às quatro da manhã.'\n\nA notícia se espalhou rapidamente. Os moradores do bairro se reuniram na praça para decidir o que fazer. Alguns sugeriram fazer uma vaquinha para comprar a padaria e mantê-la aberta. Outros, mais céticos, lembraram que o Seu Joaquim merecia descansar. No fim, decidiram que, independentemente do futuro, aquele lugar sempre seria um ponto de encontro.\n\n(Adaptado de: crônica de Carlos Drummond de Andrade, publicada em jornal fictício local, 1950.)",
+          "enunciado": "De acordo com o Texto II, a reação dos moradores à notícia da venda da padaria revela:",
+          "alternativas": [
+            "indiferença em relação ao destino do Seu Joaquim.",
+            "preocupação apenas com o valor comercial do imóvel.",
+            "apego afetivo ao estabelecimento e ao convívio que ele proporcionava.",
+            "alívio por finalmente poderem frequentar outros comércios da região.",
+            "inveja da decisão do padeiro de se aposentar."
+          ],
+          "correta": 2,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (C): O texto mostra que a padaria era 'um ponto de encontro' e dona Marta a via como 'momento de companhia', evidenciando o vínculo afetivo. \nERRADAS: (A) contradiz a reunião na praça e as sugestões. (B) reduz a questão ao comercial, ignorando o afeto. (D) não há alívio; os moradores tentam preservar o local. (E) não há indício de inveja; há respeito e até debate sobre o descanso."
+        },
+        {
+          "textoBase": "TEXTO II\n\nA cidade acordou em silêncio naquela manhã de domingo. As ruas vazias pareciam cenários de um filme antigo, onde cada esquina guardava uma memória. Seu Joaquim, o padeiro, abriu as portas da padaria como fazia há quarenta anos. O cheiro de pão quente invadia a calçada e despertava os primeiros fregueses.\n\nDona Marta, viúva, passava por ali todos os dias para comprar uma broa e conversar um pouco. 'É o meu momento de companhia', dizia, com um sorriso tímido. Naquele dia, porém, algo mudou: Seu Joaquim anunciou que venderia a padaria. 'A idade chegou, dona Marta. Não tenho mais forças para acordar às quatro da manhã.'\n\nA notícia se espalhou rapidamente. Os moradores do bairro se reuniram na praça para decidir o que fazer. Alguns sugeriram fazer uma vaquinha para comprar a padaria e mantê-la aberta. Outros, mais céticos, lembraram que o Seu Joaquim merecia descansar. No fim, decidiram que, independentemente do futuro, aquele lugar sempre seria um ponto de encontro.\n\n(Adaptado de: crônica de Carlos Drummond de Andrade, publicada em jornal fictício local, 1950.)",
+          "enunciado": "No Texto II, a fala de Seu Joaquim 'A idade chegou, dona Marta. Não tenho mais forças para acordar às quatro da manhã' tem a função de:",
+          "alternativas": [
+            "mostrar que ele estava cansado apenas naquele dia específico.",
+            "justificar a decisão de vender a padaria por limitações físicas e etárias.",
+            "indicar que dona Marta deveria assumir o negócio.",
+            "criticar a falta de ajuda dos moradores do bairro.",
+            "sugerir que a padaria não dava mais lucro."
+          ],
+          "correta": 1,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (B): A fala explica o motivo da venda: a idade e a dificuldade de manter a rotina de trabalho, sem mencionar lucro ou críticas. \nERRADAS: (A) restringe a um dia, mas a fala indica condição permanente. (C) não há sugestão de sucessão por dona Marta. (D) não critica moradores; apenas comunica uma decisão pessoal. (E) não menciona lucro ou finanças."
+        },
+        {
+          "textoBase": "TEXTO III\n\nO crescimento exponencial das redes sociais transformou a maneira como nos comunicamos. Se antes as cartas levavam dias para chegar, hoje uma mensagem cruza o planeta em segundos. Essa velocidade, porém, cobra um preço: a superficialidade das relações. Muitos usuários acumulam milhares de 'amigos' virtuais, mas se sentem profundamente sozinhos.\n\nPesquisadores da Universidade de São Paulo (USP) apontam que o uso excessivo de plataformas digitais está associado a quadros de ansiedade e depressão, especialmente entre adolescentes. A busca incessante por curtidas e validação externa cria um ciclo de dependência, no qual a autoestima fica atrelada ao desempenho virtual.\n\nPor outro lado, não se pode negar os benefícios dessas ferramentas: elas aproximam pessoas distantes, permitem a difusão de informações e viabilizam movimentos sociais. O desafio, portanto, é encontrar o equilíbrio entre o mundo digital e o real, sem que um anule o outro.\n\n(Adaptado de: OLIVEIRA, Renata. Redes sociais: conexão ou solidão? Jornal Diário Contemporâneo, 12 mar. 2025.)",
+          "enunciado": "Segundo o Texto III, o uso excessivo de redes sociais pode causar:",
+          "alternativas": [
+            "aumento da produtividade no trabalho.",
+            "melhora da autoestima e da autoconfiança.",
+            "quadros de ansiedade e depressão, especialmente em adolescentes.",
+            "aproximação exclusivamente benéfica entre pessoas.",
+            "diminuição da necessidade de aprovação social."
+          ],
+          "correta": 2,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (C): O texto menciona que pesquisadores associam o uso excessivo a ansiedade e depressão, principalmente entre jovens. \nERRADAS: (A) não é citado; o foco é na saúde mental. (B) contradiz: a autoestima fica atrelada à validação externa, gerando dependência. (D) o texto reconhece benefícios, mas não os trata como exclusivos. (E) oposto: há busca incessante por aprovação."
+        },
+        {
+          "textoBase": "TEXTO III\n\nO crescimento exponencial das redes sociais transformou a maneira como nos comunicamos. Se antes as cartas levavam dias para chegar, hoje uma mensagem cruza o planeta em segundos. Essa velocidade, porém, cobra um preço: a superficialidade das relações. Muitos usuários acumulam milhares de 'amigos' virtuais, mas se sentem profundamente sozinhos.\n\nPesquisadores da Universidade de São Paulo (USP) apontam que o uso excessivo de plataformas digitais está associado a quadros de ansiedade e depressão, especialmente entre adolescentes. A busca incessante por curtidas e validação externa cria um ciclo de dependência, no qual a autoestima fica atrelada ao desempenho virtual.\n\nPor outro lado, não se pode negar os benefícios dessas ferramentas: elas aproximam pessoas distantes, permitem a difusão de informações e viabilizam movimentos sociais. O desafio, portanto, é encontrar o equilíbrio entre o mundo digital e o real, sem que um anule o outro.\n\n(Adaptado de: OLIVEIRA, Renata. Redes sociais: conexão ou solidão? Jornal Diário Contemporâneo, 12 mar. 2025.)",
+          "enunciado": "No Texto III, a expressão 'cobra um preço' (1º parágrafo) tem sentido equivalente a:",
+          "alternativas": [
+            "gera consequências negativas.",
+            "aumenta o custo financeiro.",
+            "diminui a velocidade da comunicação.",
+            "torna as cartas obsoletas.",
+            "elimina a superficialidade."
+          ],
+          "correta": 0,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (A): 'Cobra um preço' é expressão idiomática que significa gerar efeito negativo, como a superficialidade. \nERRADAS: (B) leitura literal de 'cobra' e 'preço', sem sentido figurado. (C) não se refere à velocidade, mas ao custo social. (D) fala de cartas, mas a expressão se refere ao preço da velocidade. (E) oposto: a superficialidade é o preço, não eliminada."
+        },
+        {
+          "textoBase": "TEXTO IV\n\nA tecnologia, quando bem utilizada, pode ser uma aliada poderosa da educação. Plataformas digitais permitem que estudantes tenham acesso a conteúdos diversificados, simulações interativas e até aulas de professores de outros países. No entanto, é ingênuo acreditar que a simples presença de computadores e tablets nas salas de aula resolve os problemas de aprendizagem.\n\nUm estudo realizado pela Fundação Getúlio Vargas (FGV) mostrou que, sem formação adequada dos docentes e sem integração ao currículo, os dispositivos eletrônicos tendem a ser subutilizados ou até mesmo a atrapalhar, servindo como fonte de distração. A chave, segundo os especialistas, está na mediação pedagógica: o professor deve ser o maestro que conduz a orquestra digital, selecionando os melhores recursos e criando atividades significativas.\n\nAlém disso, é preciso considerar a questão da desigualdade: nem todos os alunos têm acesso à internet de qualidade em casa. Portanto, políticas públicas devem garantir infraestrutura e conectividade, sob pena de ampliar ainda mais o abismo entre ricos e pobres.\n\n(Adaptado de: MARTINS, Paulo. Educação digital: entre promessas e realidades. Revista Ponto de Vista, n. 78, 2024.)",
+          "enunciado": "De acordo com o Texto IV, o fator mais importante para que a tecnologia seja eficaz na educação é:",
+          "alternativas": [
+            "a substituição dos professores por tutores virtuais.",
+            "a presença de equipamentos de última geração.",
+            "a mediação pedagógica do professor.",
+            "a proibição do uso de celulares em sala.",
+            "a distribuição gratuita de tablets a todos os alunos."
+          ],
+          "correta": 2,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (C): O texto destaca que 'a chave está na mediação pedagógica', com o professor como maestro. \nERRADAS: (A) não propõe substituição, mas sim papel ativo do docente. (B) critica a mera presença de equipamentos. (D) não menciona proibição de celulares. (E) fala em infraestrutura, mas não como fator central; a mediação é o foco."
+        },
+        {
+          "textoBase": "TEXTO IV\n\nA tecnologia, quando bem utilizada, pode ser uma aliada poderosa da educação. Plataformas digitais permitem que estudantes tenham acesso a conteúdos diversificados, simulações interativas e até aulas de professores de outros países. No entanto, é ingênuo acreditar que a simples presença de computadores e tablets nas salas de aula resolve os problemas de aprendizagem.\n\nUm estudo realizado pela Fundação Getúlio Vargas (FGV) mostrou que, sem formação adequada dos docentes e sem integração ao currículo, os dispositivos eletrônicos tendem a ser subutilizados ou até mesmo a atrapalhar, servindo como fonte de distração. A chave, segundo os especialistas, está na mediação pedagógica: o professor deve ser o maestro que conduz a orquestra digital, selecionando os melhores recursos e criando atividades significativas.\n\nAlém disso, é preciso considerar a questão da desigualdade: nem todos os alunos têm acesso à internet de qualidade em casa. Portanto, políticas públicas devem garantir infraestrutura e conectividade, sob pena de ampliar ainda mais o abismo entre ricos e pobres.\n\n(Adaptado de: MARTINS, Paulo. Educação digital: entre promessas e realidades. Revista Ponto de Vista, n. 78, 2024.)",
+          "enunciado": "No Texto IV, o termo 'maestro' (2º parágrafo) é utilizado para:",
+          "alternativas": [
+            "comparar a escola a uma orquestra sinfônica profissional.",
+            "indicar que o professor deve ter controle absoluto sobre os alunos.",
+            "sugerir que a música é essencial no currículo escolar.",
+            "ressaltar o papel de condução e seleção do professor no uso da tecnologia.",
+            "mostrar que os docentes precisam ter formação em música."
+          ],
+          "correta": 3,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (D): A metáfora do maestro ilustra o professor como aquele que conduz e seleciona recursos, não controla absolutamente. \nERRADAS: (A) leitura literal exagerada; a comparação é metafórica. (B) 'controle absoluto' não é o foco, mas sim condução pedagógica. (C) não defende música no currículo, apenas usa imagem ilustrativa. (E) interpretação equivocada: não exige formação musical."
+        },
+        {
+          "textoBase": "TEXTO V\n\nA preservação do meio ambiente deixou de ser uma preocupação exclusiva de ecologistas para se tornar um imperativo global. Governos, empresas e cidadãos são convocados a repensar seus hábitos diários, desde o consumo de plástico até a geração de energia. As mudanças climáticas, evidenciadas por eventos extremos cada vez mais frequentes, não permitem mais adiamentos.\n\nNo Brasil, o desmatamento da Amazônia é um dos pontos mais críticos dessa agenda. Dados do Instituto Nacional de Pesquisas Espaciais (INPE) indicam que, apesar de reduções pontuais, a floresta continua perdendo milhares de quilômetros quadrados por ano. A pressão da agropecuária, da mineração e da grilagem de terras exige respostas firmes do poder público.\n\nContudo, especialistas alertam que a questão ambiental não se resolve apenas com repressão. É necessário oferecer alternativas econômicas sustentáveis para as populações locais, investir em ciência e tecnologia e promover educação ambiental desde a infância. Somente uma abordagem integrada poderá conciliar desenvolvimento e conservação.\n\n(Adaptado de: ALMEIDA, Fernanda. O desafio ambiental brasileiro. Jornal O Observador, 5 jun. 2025.)",
+          "enunciado": "Segundo o Texto V, o desmatamento da Amazônia é causado principalmente por:",
+          "alternativas": [
+            "fatores naturais, como secas prolongadas.",
+            "pressão da agropecuária, mineração e grilagem.",
+            "políticas de conservação mal planejadas.",
+            "turismo desordenado na região.",
+            "crescimento populacional das capitais."
+          ],
+          "correta": 1,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (B): O texto menciona explicitamente 'pressão da agropecuária, da mineração e da grilagem de terras'. \nERRADAS: (A) não cita fatores naturais como causa do desmatamento. (C) contradiz: as políticas de conservação são insuficientes, não a causa. (D) não menciona turismo. (E) não relaciona crescimento populacional das capitais ao desmatamento."
+        },
+        {
+          "textoBase": "TEXTO V\n\nA preservação do meio ambiente deixou de ser uma preocupação exclusiva de ecologistas para se tornar um imperativo global. Governos, empresas e cidadãos são convocados a repensar seus hábitos diários, desde o consumo de plástico até a geração de energia. As mudanças climáticas, evidenciadas por eventos extremos cada vez mais frequentes, não permitem mais adiamentos.\n\nNo Brasil, o desmatamento da Amazônia é um dos pontos mais críticos dessa agenda. Dados do Instituto Nacional de Pesquisas Espaciais (INPE) indicam que, apesar de reduções pontuais, a floresta continua perdendo milhares de quilômetros quadrados por ano. A pressão da agropecuária, da mineração e da grilagem de terras exige respostas firmes do poder público.\n\nContudo, especialistas alertam que a questão ambiental não se resolve apenas com repressão. É necessário oferecer alternativas econômicas sustentáveis para as populações locais, investir em ciência e tecnologia e promover educação ambiental desde a infância. Somente uma abordagem integrada poderá conciliar desenvolvimento e conservação.\n\n(Adaptado de: ALMEIDA, Fernanda. O desafio ambiental brasileiro. Jornal O Observador, 5 jun. 2025.)",
+          "enunciado": "No Texto V, a tese central defendida é que:",
+          "alternativas": [
+            "a repressão é o único meio eficaz de combater o desmatamento.",
+            "o desenvolvimento econômico deve prevalecer sobre a conservação.",
+            "a preservação ambiental exige abordagem integrada com alternativas sustentáveis e educação.",
+            "as mudanças climáticas são irreversíveis e não há mais o que fazer.",
+            "somente o poder público é responsável por resolver a crise ambiental."
+          ],
+          "correta": 2,
+          "dificuldade": "Difícil",
+          "explicacao": "CORRETA (C): O texto conclui que 'somente uma abordagem integrada' concilia desenvolvimento e conservação, com alternativas econômicas, ciência e educação. \nERRADAS: (A) contradiz: a repressão é insuficiente sem outras medidas. (B) oposto: busca conciliar desenvolvimento e conservação. (D) não há menção a irreversibilidade; o texto pede ação. (E) o texto inclui governos, empresas e cidadãos, não só poder público."
+        }
+      ]
+    },
+    {
+      "topico": "Gêneros e tipos de texto",
+      "questoes": [
+        {
+          "textoBase": "TEXTO I\n\nPrezados moradores do Bairro Vila Nova,\n\nComunicamos que, em virtude de obras de manutenção na rede elétrica, o fornecimento de energia será interrompido no próximo domingo, dia 18 de maio, das 8h às 14h. A medida é necessária para a substituição de postes e cabos, visando à segurança e à qualidade do serviço prestado.\n\nRecomendamos que desliguem aparelhos eletrônicos sensíveis e evitem abrir freezers e geladeiras durante o período. Em caso de condições climáticas adversas, o desligamento será adiado para o domingo seguinte.\n\nContamos com a compreensão de todos.\n\nAtenciosamente,\n\nCompanhia de Energia Elétrica de Contagem\n\n(Comunicado oficial fictício, 2025.)",
+          "enunciado": "O Texto I pertence ao gênero textual:",
+          "alternativas": [
+            "carta pessoal, pois estabelece diálogo íntimo com o leitor.",
+            "edital, pois estabelece normas de conduta obrigatórias.",
+            "comunicado oficial, pois informa de forma objetiva e impessoal um fato à comunidade.",
+            "crônica, pois narra fatos do cotidiano com toque de humor.",
+            "artigo de opinião, pois defende um ponto de vista sobre a rede elétrica."
+          ],
+          "correta": 2,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (C): O texto apresenta linguagem formal, destinatário coletivo, caráter informativo e remetente institucional, características de comunicado oficial. \nERRADAS: (A) não há intimidade; é impessoal. (B) edital tem caráter normativo de concurso ou licitação, não simples aviso. (D) crônica é narrativa literária, não informativa. (E) não há opinião, apenas informação."
+        },
+        {
+          "textoBase": "TEXTO II\n\nEra uma vez uma menina que morava em uma vila distante. Todos os dias, ela subia a colina para ver o pôr do sol. Um dia, encontrou um pássaro ferido e o levou para casa. Cuidou dele com tanto carinho que, em poucas semanas, ele estava curado. Ao soltá-lo, a menina sentiu uma tristeza imensa, mas logo compreendeu que amar é deixar livre.\n\n(Conto popular adaptado.)",
+          "enunciado": "O Texto II é predominantemente do tipo:",
+          "alternativas": [
+            "descritivo, pois retrata as características da vila.",
+            "dissertativo, pois defende a tese de que amar é deixar livre.",
+            "narrativo, pois apresenta personagens, enredo e sequência temporal.",
+            "expositivo, pois explica como cuidar de pássaros feridos.",
+            "injuntivo, pois orienta a leitora a soltar animais."
+          ],
+          "correta": 2,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (C): O texto conta uma história com personagens (menina, pássaro), ambiente e evolução temporal, típico da narração. \nERRADAS: (A) a descrição é secundária, não predominante. (B) não há argumentação formal; a moral aparece como fecho, mas o texto é narrativo. (D) não há objetivo instrucional. (E) não é injuntivo, pois não comanda ações do leitor."
+        },
+        {
+          "textoBase": "TEXTO III\n\nReceita de bolo de cenoura\n\nIngredientes:\n- 3 cenouras médias\n- 3 ovos\n- 1 xícara de óleo\n- 2 xícaras de açúcar\n- 2 xícaras de farinha de trigo\n- 1 colher de sopa de fermento em pó\n\nModo de preparo:\nBata no liquidificador as cenouras, os ovos e o óleo. Em uma tigela, misture o açúcar, a farinha e o fermento. Acrescente a mistura líquida e mexa até obter massa homogênea. Despeje em forma untada e leve ao forno médio por 40 minutos.\n\n(Receita culinária fictícia.)",
+          "enunciado": "O Texto III é classificado como gênero textual:",
+          "alternativas": [
+            "bula de remédio, pois indica dosagens e modo de usar.",
+            "manual de instruções, pois orienta a montagem de um equipamento.",
+            "receita culinária, pois apresenta ingredientes e modo de preparo de um prato.",
+            "cardápio, pois lista opções de alimentos e preços.",
+            "artigo científico, pois descreve experimentos na cozinha."
+          ],
+          "correta": 2,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (C): A estrutura típica de receita inclui ingredientes e modo de preparo, com verbo no imperativo. \nERRADAS: (A) bula contém indicações terapêuticas. (B) manual de instruções refere-se a aparelhos. (D) cardápio lista pratos com valores, sem preparo. (E) não há metodologia científica."
+        },
+        {
+          "textoBase": "TEXTO IV\n\nO direito à educação é garantido pela Constituição Federal de 1988, que estabelece, em seu artigo 205, que a educação visa ao pleno desenvolvimento da pessoa, seu preparo para a cidadania e sua qualificação para o trabalho. Esse princípio, no entanto, ainda enfrenta desafios na prática, como a evasão escolar e a falta de infraestrutura em muitas regiões do país.\n\nPara superar tais obstáculos, é fundamental que o Estado invista em políticas públicas eficazes, como a ampliação da jornada escolar e a formação continuada de professores. Além disso, a participação da família e da comunidade é essencial para criar um ambiente favorável à aprendizagem.\n\n(Adaptado de artigo acadêmico fictício.)",
+          "enunciado": "O Texto IV é predominantemente:",
+          "alternativas": [
+            "narrativo, pois conta a história da educação no Brasil.",
+            "descritivo, pois descreve as escolas brasileiras.",
+            "dissertativo-argumentativo, pois expõe um tema e defende um ponto de vista com argumentos.",
+            "injuntivo, pois ordena que o Estado invista em educação.",
+            "lírico, pois expressa sentimentos sobre a educação."
+          ],
+          "correta": 2,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (C): O texto apresenta um tema (direito à educação), argumentos (desafios, políticas públicas) e defende uma posição, caracterizando dissertação argumentativa. \nERRADAS: (A) não há narrativa, apenas exposição. (B) não descreve espaços físicos. (D) injuntivo ordena ações, mas aqui há argumentação, não ordens. (E) não há expressão de sentimentos pessoais."
+        },
+        {
+          "textoBase": "TEXTO V\n\n— Bom dia, senhor! O que deseja?\n— Queria um quilo de pão francês, por favor.\n— Aqui está. Mais alguma coisa?\n— Sim, aquele bolo de fubá, quanto custa?\n— Trinta reais o quilo. Leva um pedaço?\n— Levo meio quilo.\n— Perfeito, senhor. No total, deu vinte e cinco reais.\n\n(Diálogo transcrito de atendimento em padaria.)",
+          "enunciado": "O Texto V é um exemplo de gênero textual:",
+          "alternativas": [
+            "entrevista jornalística, pois há perguntas e respostas.",
+            "diálogo cotidiano, pois reproduz a conversa espontânea entre duas pessoas em uma situação informal.",
+            "debate político, pois discute preços de alimentos.",
+            "discurso de formatura, pois tem caráter solene.",
+            "telefonema comercial, pois há oferta de produtos."
+          ],
+          "correta": 1,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (B): O texto apresenta uma conversa espontânea entre cliente e atendente, com marcas de oralidade, típica do gênero diálogo cotidiano. \nERRADAS: (A) entrevista jornalística tem objetivo de informar o público, com perguntas planejadas. (C) não há debate, apenas atendimento comercial. (D) não há solenidade. (E) não é telefonema; o diálogo ocorre presencialmente."
+        },
+        {
+          "textoBase": "TEXTO VI\n\nIngredientes:\n- 2 xícaras de arroz\n- 4 xícaras de água\n- 1 cebola picada\n- 2 dentes de alho amassados\n- Sal a gosto\n- Óleo para refogar\n\nModo de preparo:\nAqueça o óleo e refogue a cebola e o alho. Acrescente o arroz e frite por dois minutos. Adicione a água e o sal. Deixe cozinhar em fogo baixo até secar. Sirva em seguida.\n\n(Receita de arroz branco fictícia.)",
+          "enunciado": "O Texto VI tem como função social principal:",
+          "alternativas": [
+            "entreter o leitor com uma história culinária.",
+            "persuadir o leitor a comprar arroz.",
+            "orientar o leitor a executar uma tarefa culinária.",
+            "descrever as propriedades nutricionais do arroz.",
+            "criticar o consumo excessivo de carboidratos."
+          ],
+          "correta": 2,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (C): Receitas têm função injuntiva/instrucional: ensinar passo a passo a preparar um alimento. \nERRADAS: (A) não é narrativa de entretenimento. (B) não há apelo comercial. (D) não há informações nutricionais. (E) não há crítica; é neutra."
+        },
+        {
+          "textoBase": "TEXTO VII\n\nA violência urbana é um fenômeno complexo, que envolve fatores sociais, econômicos e culturais. Não se pode atribuí-la a uma única causa, nem propor soluções simplistas. Entre as medidas mais eficazes, destacam-se o fortalecimento da educação, a geração de empregos e a melhoria do sistema de justiça criminal.\n\nÉ preciso, ainda, envolver a comunidade na prevenção, por meio de programas de mediação de conflitos e policiamento comunitário. Somente com ações integradas será possível reduzir os índices de criminalidade e promover uma cultura de paz.\n\n(Adaptado de artigo de opinião fictício.)",
+          "enunciado": "O Texto VII pode ser classificado como:",
+          "alternativas": [
+            "notícia, pois relata fatos recentes sobre violência.",
+            "editorial, pois expressa a opinião coletiva de um veículo de imprensa sobre um tema social.",
+            "carta ao leitor, pois dialoga diretamente com um leitor específico.",
+            "resenha, pois avalia uma obra artística sobre violência.",
+            "requerimento, pois solicita providências ao poder público."
+          ],
+          "correta": 1,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (B): O texto apresenta opinião e propostas sobre tema social, sem assinatura individual, típico de editorial. \nERRADAS: (A) notícia relata fatos sem opinião. (C) carta ao leitor tem destinatário específico e caráter pessoal. (D) resenha avalia uma obra específica. (E) requerimento é documento formal de solicitação a autoridade."
+        },
+        {
+          "textoBase": "TEXTO VIII\n\nO desmatamento na Amazônia caiu 22% em 2024, segundo dados do INPE. Apesar da melhora, especialistas alertam que a floresta continua sob pressão. O governo federal prometeu intensificar a fiscalização e criar novas unidades de conservação.\n\n(Notícia fictícia de agência de notícias.)",
+          "enunciado": "O Texto VIII é um exemplo de:",
+          "alternativas": [
+            "artigo de opinião, pois defende a redução do desmatamento.",
+            "notícia, pois relata de forma objetiva um fato atual, com dados e fontes.",
+            "crônica, pois narra o cotidiano da floresta.",
+            "conto, pois apresenta enredo com personagens.",
+            "editorial, pois expressa a posição oficial do veículo."
+          ],
+          "correta": 1,
+          "dificuldade": "Fácil",
+          "explicacao": "CORRETA (B): Notícia caracteriza-se por relato objetivo de fato recente, com fontes (INPE) e sem opinião explícita. \nERRADAS: (A) artigo de opinião tem posicionamento claro; aqui não há. (C) crônica é literária. (D) conto é narrativa ficcional. (E) editorial expressa opinião institucional, o que não ocorre."
+        },
+        {
+          "textoBase": "TEXTO IX\n\nPrezado Senhor,\n\nVenho, por meio desta, solicitar a poda das árvores localizadas na Rua das Flores, em frente ao número 245. Os galhos estão muito próximos da rede elétrica, colocando em risco os moradores.\n\nAtenciosamente,\n\nMaria da Silva\n\n(Requerimento simples fictício.)",
+          "enunciado": "O Texto IX é um gênero textual com função de:",
+          "alternativas": [
+            "informar sobre um evento local.",
+            "solicitar providência de autoridade ou órgão competente.",
+            "contar uma história de risco.",
+            "expressar sentimentos de indignação.",
+            "persuadir a população a podar árvores."
+          ],
+          "correta": 1,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (B): Trata-se de requerimento, documento formal para pedir algo a uma autoridade, com justificativa e destinatário. \nERRADAS: (A) informar não é a função central; é pedir. (C) não narra; apenas descreve a situação. (D) pode haver indignação implícita, mas o gênero é requerimento. (E) destina-se a órgão público, não à população em geral."
+        },
+        {
+          "textoBase": "TEXTO X\n\nEra uma vez um reino distante onde todos os espelhos foram proibidos. O rei, temendo a verdade, ordenou que cada reflexo fosse destruído. O povo obedecia, mas, à noite, corria para os rios e lagos para ver seu próprio rosto. Um dia, uma criança perguntou: 'Majestade, por que o senhor tem medo de si mesmo?' O rei, envergonhado, revogou a lei e mandou construir uma praça com mil espelhos.\n\n(Conto alegórico fictício.)",
+          "enunciado": "O Texto X é um conto alegórico. Sua principal característica é:",
+          "alternativas": [
+            "transmitir uma lição moral ou reflexão por meio de elementos simbólicos.",
+            "relatar fatos reais com precisão histórica.",
+            "apresentar argumentos lógicos para convencer o leitor.",
+            "descrever minuciosamente o cenário e os personagens.",
+            "orientar o leitor a agir de determinada forma."
+          ],
+          "correta": 0,
+          "dificuldade": "Difícil",
+          "explicacao": "CORRETA (A): O conto alegórico usa símbolos (espelhos, rei, criança) para transmitir uma reflexão moral sobre medo da verdade. \nERRADAS: (B) não é relato factual. (C) não há argumentação formal. (D) a descrição é mínima, a ênfase está no símbolo. (E) não há injunção; a moral é implícita."
+        }
+      ]
+    }
+  ]
+}

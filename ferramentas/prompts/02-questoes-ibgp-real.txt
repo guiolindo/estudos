@@ -1,0 +1,379 @@
+====================================================================
+PROMPT PARA REGENERAR QUESTÕES NO ESTILO REAL DA BANCA IBGP
+Concurso Prefeitura de Contagem/MG — Edital 01/2026
+====================================================================
+
+INSTRUÇÕES DE USO (pra você, humano):
+
+1. Rode UM prompt por conversa/thread limpa em outra IA (DeepSeek,
+   Claude, Gemini, ChatGPT). Não misture disciplinas na mesma thread.
+
+2. IMPORTANTE: se a IA cortar antes de terminar, é normal. Peça:
+   "continue de onde parou, mantendo o formato JSON exato, próximo
+   tópico: [nome]". Cole todas as partes juntas.
+
+3. Rode UMA DISCIPLINA POR VEZ. Comece por Português.
+
+4. Cole o JSON completo aqui e eu integro no HTML substituindo as
+   questões atuais (que estão fracas).
+
+Há 4 prompts abaixo — um pra cada disciplina comum. Rode na ordem:
+Português → Informática → Raciocínio Lógico → Conhecimentos Gerais.
+
+Cargo-específicos ficam pra depois.
+
+
+====================================================================
+========  DNA DA BANCA IBGP — LEIA ANTES DE USAR OS PROMPTS  ======
+====================================================================
+
+O IBGP (Instituto Brasileiro de Gestão e Pesquisa, Belo Horizonte)
+é a banca oficial do Concurso Prefeitura de Contagem/MG 01/2026.
+Características das provas reais dela que vamos reproduzir:
+
+- Múltipla escolha com 4 ou 5 alternativas (usaremos 5, mais denso).
+- Dificuldade MODERADA: mais direta que Cebraspe/FGV, mas cobra
+  detalhes de legislação e teoria. Não é decoreba pura.
+- Segue FIELMENTE o conteúdo programático do edital (Anexo IV).
+- LITERAL na letra da lei: usa expressões exatas de LGPD, CF/88,
+  Estatuto do Servidor Municipal, Lei Orgânica de Contagem, ECA,
+  Lei de Improbidade, etc.
+- Questões de Português quase sempre têm TEXTO-BASE (texto de
+  jornal, artigo de opinião, notícia, tirinha ou crônica) e as
+  perguntas remetem a ele.
+- Questões de Informática usam SITUAÇÃO-PROBLEMA ("O servidor João
+  precisa..."), com print/descrição de tela, atalho, fórmula de
+  planilha ou nome exato de recurso do Windows/Office.
+- Questões de Raciocínio Lógico costumam ter enunciado narrativo
+  ("Em um grupo de 30 pessoas, 12 falam inglês...") ou sequência
+  numérica/lógica com pegadinha.
+- Distratores plausíveis: são erros que um estudante médio comete
+  (troca de nomenclatura parecida, letra da lei alterada
+  sutilmente, ordem trocada, unidade errada, artigo diferente).
+- Explicação da correta E de POR QUE cada errada está errada.
+
+Distribuição de dificuldade por bloco de 10 questões:
+- 3 Fáceis (conceito direto, letra da lei citada literalmente)
+- 5 Médias (aplicação, situação-problema, análise de texto curto)
+- 2 Difíceis (pegadinha, cruzamento de dois conceitos, cálculo
+  em mais de um passo, item mais estranho da lei)
+
+
+====================================================================
+==============  PROMPT 1 — LÍNGUA PORTUGUESA (IBGP)  ==============
+====================================================================
+
+Você é um elaborador experiente de questões de Língua Portuguesa
+para bancas de concurso público, especializado no estilo do IBGP
+(Instituto Brasileiro de Gestão e Pesquisa, banca do Concurso da
+Prefeitura de Contagem/MG — Edital 01/2026).
+
+Sua tarefa é REESCREVER as 10 questões de cada aula de Língua
+Portuguesa no padrão FIEL das provas reais do IBGP. NÃO gere
+conteúdo teórico das aulas — apenas as questões novas.
+
+REGRAS OBRIGATÓRIAS DE PADRÃO IBGP (siga religiosamente):
+
+1. TEXTO-BASE:
+   - PELO MENOS 6 das 10 questões devem ter texto-base próprio
+     de 5 a 15 linhas (150 a 400 palavras): trecho de artigo de
+     opinião, notícia, crônica, tirinha descrita, editorial,
+     poema curto, fragmento de romance brasileiro.
+   - O texto pode ser inventado (com autor e fonte fictícios
+     plausíveis, ex: "adaptado de crônica de Luís Fernando
+     Veríssimo" — pode inventar) OU baseado em obras de domínio
+     público (Machado de Assis, Bilac, Drummond antes de 1958,
+     Manuel Bandeira antes de 1958).
+   - O mesmo texto-base pode servir a 2 ou 3 questões seguidas
+     (bloco), imitando as provas reais.
+   - Texto-base deve ser TEMÁTICO com o tópico da aula quando
+     possível (ex: texto sobre educação para questão de coesão).
+
+2. ESTRUTURA DA QUESTÃO:
+   - Enunciado começa referenciando o texto: "Segundo o texto...",
+     "No trecho 'X', a palavra..." "Em relação ao Texto I...",
+     "Considere o Texto acima para responder à questão.".
+   - 5 alternativas (A a E, sem prefixo — só o texto).
+   - UMA correta, quatro distratores plausíveis.
+
+3. TIPOS DE DISTRATOR PLAUSÍVEL (obrigatório variar):
+   - Troca de conceito próximo (metáfora vs metonímia; próclise
+     vs mesóclise; oração restritiva vs explicativa).
+   - Análise correta do trecho errado (o candidato erra o
+     referencial).
+   - Regra correta aplicada a exceção não considerada.
+   - Ortografia atualizada trocada pela antiga (trema em
+     linguiça, hífen do Acordo de 2009).
+   - Concordância aparentemente ok mas com sujeito posposto
+     tricky.
+
+4. EXPLICAÇÃO:
+   - Justifique a correta EM UMA FRASE citando a regra.
+   - Justifique cada uma das outras 4 alternativas — o erro
+     específico dela ("Errada porque X").
+   - Se envolver artigo de gramática, cite o Acordo Ortográfico
+     de 2009 ou NGB.
+
+5. DIFICULDADE (por bloco de 10):
+   - 3 Fáceis, 5 Médias, 2 Difíceis.
+
+6. ORTOGRAFIA: obedeça ao Acordo Ortográfico de 2009 vigente.
+
+Cubra os 23 tópicos do Anexo IV do Edital (um bloco de 10
+questões por tópico):
+
+Nível Médio:
+1. Compreensão e interpretação de textos
+2. Gêneros e tipos de texto
+3. Significação das palavras (semântica)
+4. Figuras de Sintaxe
+5. Figuras de Linguagem
+6. Articulação textual: operadores sequenciais e expressões referenciais
+7. Coesão e coerência textual
+8. Classes de palavras: identificação, flexão e emprego
+9. Formação de palavras
+10. Verbos: flexão, conjugação, vozes, correlação de tempos e modos
+11. Concordância verbal e nominal
+12. Regência verbal e nominal
+13. Crase
+14. Colocação pronominal
+15. Estrutura da oração e do período
+16. Acentuação gráfica
+17. Ortografia
+18. Pontuação
+19. Variação linguística
+
+Nível Superior (adicionais):
+20. Discursos direto, indireto e indireto livre
+21. Estratégias argumentativas
+22. Processos de formação de palavras (aprofundamento)
+23. Uso dos pronomes relativos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FORMATO DE SAÍDA — devolva APENAS UM bloco JSON válido, sem
+texto antes nem depois. Estrutura:
+
+```json
+{
+  "meta": {"disciplina":"Língua Portuguesa","banca":"IBGP","estilo":"real"},
+  "blocos": [
+    {
+      "topico": "Compreensão e interpretação de textos",
+      "questoes": [
+        {
+          "textoBase": "TEXTO I\n\n[texto de 150-400 palavras aqui, com quebras \\n\\n entre parágrafos]\n\n(NOME DO AUTOR. Fonte fictícia plausível. Adaptado.)",
+          "enunciado": "Segundo o Texto I, o autor defende que...",
+          "alternativas": [
+            "alternativa a sem prefixo",
+            "alternativa b",
+            "alternativa c",
+            "alternativa d",
+            "alternativa e"
+          ],
+          "correta": 2,
+          "dificuldade": "Média",
+          "explicacao": "CORRETA (C): justificativa em uma frase citando a regra. \\nERRADAS: (A) [motivo]; (B) [motivo]; (D) [motivo]; (E) [motivo]."
+        }
+      ]
+    }
+  ]
+}
+```
+
+Se uma questão NÃO precisar de texto-base (tipo questão de
+ortografia isolada), use "textoBase": "" (string vazia).
+Se DUAS questões compartilharem o mesmo texto-base, repita o
+texto em ambas (facilita a integração).
+
+Se atingir o limite de tokens antes de terminar os 23 tópicos,
+NÃO invente atalhos — pare no meio e diga:
+"CONTINUARÁ NO PRÓXIMO TURNO — próximo tópico: [nome]".
+
+
+====================================================================
+============  PROMPT 2 — NOÇÕES DE INFORMÁTICA (IBGP)  ============
+====================================================================
+
+Você é elaborador de questões de Noções de Informática no padrão
+IBGP para o Concurso da Prefeitura de Contagem/MG 01/2026.
+
+Regras específicas de Informática:
+
+1. SITUAÇÃO-PROBLEMA em pelo menos 6 das 10 questões:
+   "A servidora Maria precisa..."; "Ao abrir o Excel, João
+   digitou..."; "Um funcionário recebeu um e-mail suspeito com
+   anexo .exe. Ele deve..."
+
+2. Cite VERSÕES REAIS de software: Windows 10 e 11, Microsoft
+   365, Google Workspace, Excel/Sheets. Atalhos de teclado
+   corretos (Ctrl+C, Ctrl+Shift+End, Win+E, F2 renomear, etc.).
+
+3. Fórmulas de planilha COM SINTAXE EXATA:
+   =SOMA(A1:A10); =SE(A1>10;"Alto";"Baixo"); =PROCV(valor;
+   matriz;coluna;0); =CONT.SE(intervalo;critério); referência
+   absoluta com $ ($A$1). Distratores devem trocar SE por SES,
+   PROCV por PROCH, ; por ,, ordem dos parâmetros, etc.
+
+4. Legislação vigente (LITERAL):
+   - LGPD Lei 13.709/2018 (art. 5º define dados pessoais e
+     sensíveis; art. 7º hipóteses de tratamento; art. 46
+     segurança; art. 48 comunicação de incidente à ANPD).
+   - Marco Civil da Internet Lei 12.965/2014.
+   - Lei 14.063/2020 (assinatura eletrônica: simples,
+     avançada, qualificada; ICP-Brasil).
+
+5. Ameaças e defesas: nomes técnicos exatos — phishing,
+   spear phishing, pharming, vishing, smishing, ransomware,
+   trojan, worm, spyware, keylogger, rootkit, botnet, DDoS.
+   Distinguir cada uma (banca adora confundir vírus com worm,
+   worm com trojan).
+
+6. Backup: full, incremental, diferencial, espelho — banca
+   confunde incremental (só o que mudou desde o último
+   backup, seja full ou incremental) com diferencial (o que
+   mudou desde o último FULL).
+
+7. Nuvem: IaaS, PaaS, SaaS — exemplos práticos de cada;
+   modelo de responsabilidade compartilhada.
+
+8. Certificado digital: chave pública/privada, ICP-Brasil,
+   A1 (arquivo, 1 ano) x A3 (token/cartão, 3 anos).
+
+9. IA generativa e LGPD: risco de dados pessoais em prompts;
+   revisão humana; hipótese de tratamento (consentimento,
+   legítimo interesse); direito à explicação.
+
+Distribuição: 3 Fáceis, 5 Médias, 2 Difíceis por bloco.
+Distratores plausíveis: trocar Ctrl+C por Ctrl+X; PaaS por
+SaaS; incremental por diferencial; ransomware por spyware.
+
+Cubra os 25 tópicos do Anexo IV (um bloco de 10 questões cada):
+
+1. Sistema operacional Microsoft Windows (10 e 11)
+2. Explorador de Arquivos
+3. Área de transferência e compartilhamento
+4. Configurações essenciais (resolução, impressoras)
+5. Microsoft 365 e Google Workspace
+6. Fórmulas de planilha (SOMA, MÉDIA, SE, PROCV, CONT.SE)
+7. Colaboração e comunicação em equipe
+8. Hardware: fundamentos, componentes
+9. Memória, armazenamento, unidades (bit, byte, KB…TB)
+10. Redes: internet, intranet, extranet, protocolos
+11. Navegadores, mecanismos de busca
+12. Computação em nuvem (IaaS, PaaS, SaaS)
+13. Noções de banco de dados
+14. Segurança da informação: princípios CID
+15. Vírus, worms, malwares, trojans, ransomware
+16. Golpes digitais e engenharia social
+17. Antivírus, firewall, antispyware
+18. Boas práticas de senha (2FA, gerenciadores)
+19. Segurança em nuvem, ética digital
+20. Certificados Digitais (ICP-Brasil, A1/A3)
+21. Backup: tipos, políticas, recuperação
+22. Meios de armazenamento e RPO/RTO
+23. Inteligência Artificial: machine learning
+24. Assistentes virtuais e automação
+25. IA generativa: uso responsável, LGPD
+
+FORMATO DE SAÍDA: mesmo JSON do Prompt 1, com "disciplina"
+igual a "Noções de Informática".
+
+
+====================================================================
+============  PROMPT 3 — RACIOCÍNIO LÓGICO (IBGP)  ================
+====================================================================
+
+Você é elaborador de questões de Raciocínio Lógico e Matemática
+no padrão IBGP para o Concurso da Prefeitura de Contagem/MG.
+
+Regras específicas:
+
+1. Enunciado NARRATIVO, contextualizado (evite "Resolva x + 2y =
+   10"). Use servidores, prefeitura, cidadãos, escola, hospital
+   como contexto: "A Secretaria de Saúde de Contagem distribuiu
+   3.600 doses de vacina em 3 dias..."
+
+2. Cálculo em 2 ou 3 passos na maioria das médias/difíceis.
+   Distrator = resposta de quem parou no penúltimo passo.
+
+3. Regra de três, porcentagem, juros simples/composto, razão
+   e proporção, sistema linear, análise combinatória (arranjo,
+   combinação, permutação), probabilidade, conjuntos (união,
+   interseção, diferença — muito comum!), sequências lógicas,
+   proposições (verdade, tautologia, contradição), silogismo,
+   equivalência lógica (contrapositiva, De Morgan), quantifica-
+   dores (todo, algum, nenhum).
+
+4. Distratores clássicos:
+   - Trocar interseção por união
+   - Esquecer subtrair a interseção no conjunto
+   - Aplicar juros simples quando é composto
+   - Confundir 20% de aumento seguido de 20% de desconto (dá
+     -4% líquido, não 0)
+   - Contrapositiva errada (nega mas não inverte)
+   - Se a→b, então b→a (falácia da afirmação do consequente)
+
+5. Se a questão pede sequência, sempre 3 alternativas com
+   padrões diferentes plausíveis.
+
+6. Datas, valores em R$ e unidades reais.
+
+Distribuição: 3 Fáceis, 5 Médias, 2 Difíceis.
+
+Cubra os tópicos do Anexo IV (adapte à lista de aulas que
+já existe na disciplina). Se você não souber os tópicos
+específicos, gere 10 blocos genéricos cobrindo: proposições,
+conectivos, tabelas-verdade, equivalências, quantificadores,
+sequências, conjuntos, análise combinatória, probabilidade,
+regra de três/porcentagem, juros, sistemas lineares,
+geometria plana básica, valor absoluto/módulo.
+
+FORMATO DE SAÍDA: mesmo JSON, "disciplina": "Raciocínio Lógico".
+
+
+====================================================================
+========  PROMPT 4 — CONHECIMENTOS GERAIS/MUNICIPAIS  =============
+====================================================================
+
+Você é elaborador de questões de Conhecimentos Gerais e do
+Município no padrão IBGP para Contagem/MG 01/2026.
+
+Regras específicas:
+
+1. Cite legislação MUNICIPAL DE CONTAGEM (real, verifique
+   online se possível): Lei Orgânica do Município, Estatuto
+   do Servidor Público Municipal de Contagem (Lei Complementar
+   nº 006/2005 se aplicável), leis complementares recentes
+   (LC 362/2023, LC 394/2025, LC 396/2025, LC 295/2020 —
+   confirme com fonte antes).
+
+2. Legislação federal aplicável: Constituição de 1988
+   (arts. 37-41 — servidores públicos; arts. 5-17 — direitos
+   fundamentais; arts. 196-200 — saúde; art. 205-214 —
+   educação); Lei 8.429/1992 (Improbidade Administrativa);
+   Lei 12.527/2011 (Acesso à Informação); Lei 12.846/2013
+   (Anticorrupção); Estatuto da Criança e do Adolescente
+   (Lei 8.069/1990); Estatuto do Idoso (Lei 10.741/2003);
+   Lei 8.080/1990 (SUS).
+
+3. Dados de Contagem: 2ª maior cidade da região metropolitana
+   de BH; população ~660 mil; polo industrial (Cidade
+   Industrial); principais bairros (Eldorado, Riacho, Nova
+   Contagem); rios principais; prefeito e vice atuais (se
+   souber, cite).
+
+4. Atualidades regionais e nacionais dos 12 meses anteriores
+   à data da prova (jan/2027) — foco em Minas Gerais,
+   Contagem e políticas públicas municipais.
+
+5. Distratores: trocar Lei Federal por Lei Municipal, ano
+   errado, número de artigo alterado em 1 dígito, órgão errado.
+
+Distribuição: 3 Fáceis, 5 Médias, 2 Difíceis.
+
+FORMATO DE SAÍDA: mesmo JSON, "disciplina": "Conhecimentos
+Gerais e do Município de Contagem".
+
+
+====================================================================
+Fim dos prompts.

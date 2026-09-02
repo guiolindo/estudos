@@ -1,0 +1,256 @@
+====================================================================
+PROMPTS PARA REGENERAR PORTUGUÊS E INFORMÁTICA — CONTAGEM 2026
+====================================================================
+
+INSTRUÇÕES DE USO (pra você):
+
+1. Rode UM prompt por conversa/thread limpa em outra IA (DeepSeek,
+   Claude, Gemini, ChatGPT — o que preferir). Não misture.
+
+2. IMPORTANTE: se a IA cortar a resposta antes de terminar todos os
+   tópicos, é NORMAL. Peça: "continue de onde parou, mantendo o
+   formato JSON exato". Cole todas as partes juntas quando terminar.
+
+3. Cole a resposta aqui pra mim (JSON completo, mesmo em vários
+   pedaços). Eu integro no arquivo substituindo o material fraco atual.
+
+Há 2 prompts abaixo — cada um em bloco separado.
+
+
+====================================================================
+============  PROMPT 1 — LÍNGUA PORTUGUESA  =========================
+====================================================================
+
+Você é um professor experiente de Língua Portuguesa para concursos
+públicos de nível médio e superior. Sua tarefa é produzir MATERIAL DE
+ESTUDO EXTENSO E APROFUNDADO para o Concurso Público da Prefeitura de
+Contagem/MG (Edital nº 01/2026), disciplina LÍNGUA PORTUGUESA (comum a
+todos os cargos).
+
+REGRA ESSENCIAL DE DENSIDADE:
+- Cada SEÇÃO deve ter no mínimo 700 palavras e no máximo 1200
+- Cada aula deve ter de 3 a 6 seções
+- Não economize em teoria: explique tudo com exemplos concretos,
+  contra-exemplos, casos limítrofes, macetes, pegadinhas de banca
+- Objetivo: substituir uma apostila completa
+
+FONTE: consulte o Anexo IV do Edital 01/2026 disponível em
+https://portal.contagem.mg.gov.br/editais/04_-_anexo_iv_-_conteudos_programAticos_14020217.pdf
+
+TÓPICOS OBRIGATÓRIOS (cubra TODOS, um por aula):
+
+Nível Médio:
+1. Compreensão e interpretação de textos
+2. Gêneros e tipos de texto
+3. Significação das palavras (semântica)
+4. Figuras de Sintaxe
+5. Figuras de Linguagem
+6. Articulação textual: operadores sequenciais e expressões referenciais
+7. Coesão e coerência textual
+8. Classes de palavras: identificação, flexão e emprego
+9. Formação de palavras
+10. Verbos: flexão, conjugação, vozes, correlação de tempos e modos
+11. Concordância verbal e nominal
+12. Regência verbal e nominal
+13. Crase
+14. Colocação pronominal
+15. Estrutura da oração e do período (sintática e semântica)
+16. Acentuação gráfica
+17. Ortografia
+18. Pontuação
+19. Variação linguística
+
+Nível Superior (adicionais):
+20. Discursos direto, indireto e indireto livre
+21. Estratégias argumentativas
+22. Processos de formação de palavras (aprofundamento)
+23. Uso dos pronomes relativos
+
+PARA CADA TÓPICO/AULA, produza:
+
+- "intro": 2 a 4 frases situando o assunto e por que ele cai em prova.
+
+- "palavrasChave": 5 a 10 termos técnicos essenciais (array).
+
+- "secoes": 3 a 6 seções, cada uma com "titulo" e "conteudo"
+  (700 a 1200 palavras cada). Use Markdown básico: **negrito**,
+  *itálico*, listas com "- ", listas numeradas "1. ", tabelas simples.
+  Cubra: regra geral, casos especiais, exceções, pegadinhas de banca,
+  paralelo com norma-padrão, exemplos abundantes.
+
+- "exemplos": pelo menos 3 exemplos, cada um com "enunciado" e
+  "resolucao" detalhada (não apenas resposta).
+
+- "dicas": 4 a 8 dicas/macetes práticos em array de strings.
+
+- "resumo": mini-resumo em bullet points ("- ...\n- ...").
+
+- "questoes": EXATAMENTE 10 questões inéditas de múltipla escolha,
+  5 alternativas cada, estilo banca de concurso (IBGP, Cebraspe, FGV,
+  FCC — formal, sem "todas as anteriores"). Cada questão:
+    "enunciado": string
+    "alternativas": array de 5 strings (sem prefixo "a)", "b)")
+    "correta": índice 0-4
+    "dificuldade": "Fácil" | "Média" | "Difícil"
+    "explicacao": justificativa da correta E por que cada uma das
+                  outras 4 está errada, ponto a ponto.
+
+Base normativa: Acordo Ortográfico da Língua Portuguesa (2009) vigente,
+Nomenclatura Gramatical Brasileira (NGB).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FORMATO DE SAÍDA — devolva APENAS UM bloco JSON válido, sem texto
+antes ou depois:
+
+```json
+{
+  "meta": {"disciplina":"Língua Portuguesa","geradoEm":"2026-XX-XX"},
+  "aulas": [
+    {
+      "disciplina":"Língua Portuguesa",
+      "topico":"Compreensão e interpretação de textos",
+      "intro":"...",
+      "palavrasChave":["...","..."],
+      "secoes":[
+        {"titulo":"...","conteudo":"..."},
+        {"titulo":"...","conteudo":"..."}
+      ],
+      "exemplos":[
+        {"enunciado":"...","resolucao":"..."}
+      ],
+      "dicas":["...","..."],
+      "resumo":"- ...\n- ...",
+      "questoes":[
+        {"enunciado":"...","alternativas":["a","b","c","d","e"],"correta":2,"dificuldade":"Média","explicacao":"..."}
+      ]
+    }
+  ]
+}
+```
+
+Se atingir o limite de tokens antes de terminar todos os 23 tópicos,
+NÃO invente atalhos nem resuma — pare no meio e diga:
+"CONTINUARÁ NO PRÓXIMO TURNO — próximo tópico: [nome]".
+Vou pedir para continuar mantendo o formato.
+
+
+====================================================================
+============  PROMPT 2 — NOÇÕES DE INFORMÁTICA  =====================
+====================================================================
+
+Você é um professor experiente de Informática para concursos públicos.
+Sua tarefa é produzir MATERIAL DE ESTUDO EXTENSO E APROFUNDADO para o
+Concurso da Prefeitura de Contagem/MG (Edital nº 01/2026), disciplina
+NOÇÕES DE INFORMÁTICA (cargos de nível médio).
+
+REGRA ESSENCIAL DE DENSIDADE:
+- Cada SEÇÃO deve ter no mínimo 700 palavras e no máximo 1200
+- Cada aula deve ter de 3 a 6 seções
+- Não economize: explique passo a passo, cite versões atuais de
+  software (Windows 10 e 11, Microsoft 365, LGPD), dê muitos exemplos
+  e caminhos de uso concretos
+- Objetivo: substituir uma apostila completa
+
+FONTE: Anexo IV do Edital 01/2026
+https://portal.contagem.mg.gov.br/editais/04_-_anexo_iv_-_conteudos_programAticos_14020217.pdf
+
+TÓPICOS OBRIGATÓRIOS (cubra TODOS, um por aula):
+
+1. Sistema operacional Microsoft Windows (10 e 11): conceitos,
+   janelas, menus, barra de tarefas, área de trabalho
+2. Explorador de Arquivos: gerenciamento de pastas e arquivos
+3. Área de transferência e compartilhamento
+4. Configurações essenciais (resolução, cores, fontes, impressoras)
+5. Ambientes Microsoft 365 e Google Workspace: documentos, planilhas,
+   apresentações
+6. Fórmulas de planilha Excel/Sheets (SOMA, MÉDIA, SE, PROCV/VLOOKUP,
+   CONT.SE/COUNTIF, referências absolutas $)
+7. Colaboração e comunicação em equipe (edição simultânea, comentários,
+   compartilhamento)
+8. Hardware: fundamentos, arquitetura, componentes, periféricos
+9. Memória (RAM, ROM, cache), armazenamento (HD, SSD), unidades de
+   medida (bit, byte, KB, MB, GB, TB)
+10. Redes: internet, intranet, extranet — conceitos, tecnologias,
+    protocolos (HTTP/HTTPS, FTP, SMTP, DNS, TCP/IP)
+11. Navegadores, mecanismos de busca, pesquisa avançada
+12. Computação em nuvem e armazenamento de dados (IaaS, PaaS, SaaS)
+13. Noções de banco de dados
+14. Segurança da informação: princípios CID, boas práticas, proteção
+    de dados pessoais
+15. Vírus, worms, malwares, trojans, ransomware, spyware, adware,
+    keylogger, rootkit
+16. Golpes digitais e engenharia social (phishing, pharming, vishing,
+    smishing)
+17. Aplicativos de segurança: antivírus, firewall, antispyware
+18. Boas práticas de senha e informações sensíveis (2FA, gerenciadores)
+19. Segurança em ambientes de nuvem, ética digital
+20. Certificados Digitais (ICP-Brasil, chave pública/privada)
+21. Backup: tipos (completo, incremental, diferencial, espelho),
+    políticas e recuperação
+22. Meios de armazenamento e planos de contingência (RPO, RTO)
+23. Inteligência Artificial: conceitos, machine learning, aplicações
+    no trabalho
+24. Assistentes virtuais e automação de tarefas
+25. Ferramentas de IA generativa: uso responsável, limitações,
+    boas práticas (relação com LGPD)
+
+PARA CADA TÓPICO/AULA, produza:
+
+- "intro": 2 a 4 frases situando o assunto e por que ele cai em prova.
+
+- "palavrasChave": 5 a 10 termos técnicos essenciais.
+
+- "secoes": 3 a 6 seções, cada uma com "titulo" e "conteudo"
+  (700 a 1200 palavras cada). Use Markdown básico. Cubra: conceito,
+  aplicação prática (com passo a passo em Windows/M365/Sheets quando
+  aplicável), atalhos de teclado relevantes, comparações entre versões,
+  pegadinhas típicas de banca, base legal (LGPD Lei 13.709/2018 quando
+  aplicável).
+
+- "exemplos": pelo menos 3 exemplos com "enunciado" e "resolucao"
+  detalhada (com passo a passo).
+
+- "dicas": 4 a 8 dicas/macetes práticos.
+
+- "resumo": mini-resumo em bullet points.
+
+- "questoes": EXATAMENTE 10 questões inéditas de múltipla escolha,
+  5 alternativas cada, estilo banca. Cada questão: "enunciado",
+  "alternativas" (5 strings, sem prefixo "a)"), "correta" (0-4),
+  "dificuldade", "explicacao" com justificativa item a item.
+
+Cite legislação vigente: LGPD (13.709/2018), Marco Civil da Internet
+(12.965/2014), Lei 14.063/2020 (assinatura eletrônica).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FORMATO DE SAÍDA — devolva APENAS UM bloco JSON válido:
+
+```json
+{
+  "meta": {"disciplina":"Noções de Informática","geradoEm":"2026-XX-XX"},
+  "aulas": [
+    {
+      "disciplina":"Noções de Informática",
+      "topico":"Sistema operacional Microsoft Windows (10 e 11)...",
+      "intro":"...",
+      "palavrasChave":["...","..."],
+      "secoes":[
+        {"titulo":"...","conteudo":"..."}
+      ],
+      "exemplos":[
+        {"enunciado":"...","resolucao":"..."}
+      ],
+      "dicas":["...","..."],
+      "resumo":"- ...\n- ...",
+      "questoes":[
+        {"enunciado":"...","alternativas":["a","b","c","d","e"],"correta":2,"dificuldade":"Média","explicacao":"..."}
+      ]
+    }
+  ]
+}
+```
+
+Se atingir o limite de tokens antes de terminar os 25 tópicos, pare
+no meio e diga: "CONTINUARÁ NO PRÓXIMO TURNO — próximo tópico: [nome]".
+
+Fim.
